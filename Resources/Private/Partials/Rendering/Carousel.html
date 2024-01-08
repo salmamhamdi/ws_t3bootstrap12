@@ -1,0 +1,75 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+     xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+     data-namespace-typo3-fluid="true">
+
+    <f:section name="Main">
+
+        <div id="{settings.carousel.id}" class="{settings.carousel.id} carousel slide" data-bs-ride="carousel" data-bs-interval="{settings.carousel.interval}">
+            <f:if condition="{settings.carousel.enableIndicators}">
+                <ol class="carousel-indicators">
+                    <f:for each="{elements}" as="image" iteration="iteration">
+                        <li data-target="#{settings.carousel.id}" data-bs-slide-to="{iteration.index}" class="{f:if(condition: iteration.isFirst, then: 'active')}"></li>
+                    </f:for>
+                </ol>
+            </f:if>
+            <div class="carousel-inner">
+                <f:for each="{elements}" as="element" iteration="iteration">
+                    <div class="carousel-item{f:if(condition: iteration.isFirst, then: ' active')}">
+                        <f:for each="{element}" key="elementType" as="elementData">
+                            <f:render section="{elementType -> v:format.case(case: 'ucfirst')}" arguments="{_all}"/>
+                            <f:if condition="{elementData.caption} != '' or {elementData.header} != ''">
+                                <div class="carousel-caption">
+                                    <f:if condition="{elementData.header} != ''">
+                                        <h4>{elementData.header -> f:format.html()}</h4>
+                                    </f:if>
+                                    <f:if condition="{elementData.caption} != ''">
+                                        {elementData.caption -> f:format.html()}
+                                    </f:if>
+                                </div>
+                            </f:if>
+                        </f:for>
+                    </div>
+                </f:for>
+            </div>
+            <f:if condition="{settings.carousel.controls}">
+
+                <a class="carousel-control-prev" href="#{settings.carousel.id}" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#{settings.carousel.id}" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </f:if>
+        </div>
+    </f:section>
+
+    <f:section name="Image">
+
+        <f:render partial="Image" section="Image" arguments="{src:elementData.file, alt:elementData.header, class: 'img-fluid'}"/>
+
+    </f:section>
+
+    <f:section name="Content">
+        <div class="container-fluid">
+            <flux:content.render area="{elementData.id}"/>
+        </div>
+    </f:section>
+
+    <f:section name="Text">
+        <div class="container-fluid">
+            <f:if condition="{elementData.title}">
+                <v:tag name="{elementData.size}">
+                    {elementData.title -> f:format.htmlentities()}
+                </v:tag>
+            </f:if>
+            {elementData.text -> f:format.html()}
+        </div>
+    </f:section>
+
+</html>

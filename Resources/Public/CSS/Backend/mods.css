@@ -1,0 +1,75 @@
+
+
+.big-icon-list .icon {
+    width: 64px;
+    height: 64px;
+}
+
+/* CKEditor relevant */
+.cke_combo_text, .cke_combopanel{
+    width: auto !important;
+}
+
+
+wapplersystems-backend-formengine-suggest-icon-result-container {
+    position: absolute;
+    left: 0;
+    z-index: 1000;
+    max-width: calc(100vw - 20px)
+}
+
+wapplersystems-backend-formengine-suggest-icon-result-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background-color: var(--typo3-component-bg);
+    border: var(--typo3-component-border-width) solid var(--typo3-component-border-color);
+    border-radius: var(--typo3-component-border-radius);
+    box-shadow: var(--typo3-component-box-shadow);
+    font-size: var(--typo3-component-font-size);
+    line-height: var(--typo3-component-line-height)
+}
+
+wapplersystems-backend-formengine-suggest-icon-result-item {
+    display: flex;
+    gap: .5em;
+    font-size: var(--typo3-component-font-size);
+    line-height: var(--typo3-component-line-height);
+    padding: var(--typo3-list-item-padding-y) var(--typo3-list-item-padding-x);
+    border-radius: calc(var(--typo3-component-border-radius) - var(--typo3-component-border-width));
+    color: #000;
+    background-color: #fff;
+    cursor: pointer
+}
+
+wapplersystems-backend-formengine-suggest-icon-result-item:focus, wapplersystems-backend-formengine-suggest-icon-result-item:hover {
+    z-index: 1;
+    outline-offset: -1px
+}
+
+wapplersystems-backend-formengine-suggest-icon-result-item:hover {
+    background-color: #f2f8fe;
+    outline: 1px solid #d9ebfb
+}
+
+wapplersystems-backend-formengine-suggest-icon-result-item:focus {
+    background-color: #f2f8fe;
+    outline: 1px solid #3393eb
+}
+
+wapplersystems-backend-formengine-suggest-icon-result-item .formengine-suggest-icon-result-item-icon {
+    flex-grow: 0;
+    flex-shrink: 0
+}
+
+wapplersystems-backend-formengine-suggest-icon-result-item .formengine-suggest-icon-result-item-label {
+    flex-grow: 1
+}
+
+wapplersystems-backend-formengine-suggest-icon-result-item .formengine-suggest-icon-result-item-label .small, wapplersystems-backend-formengine-suggest-icon-result-item .formengine-suggest-icon-result-item-label small {
+    opacity: .5
+}
+
+.formengine-suggest-result-item-icon svg {
+    width: 16px;
+}

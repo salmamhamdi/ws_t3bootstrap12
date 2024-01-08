@@ -1,0 +1,217 @@
+# number musst be lower than the template
+lib.contentElement.templateRootPaths.5 = EXT:ws_t3bootstrap/Resources/Private/Extensions/fluid_styled_content/Templates/
+lib.contentElement.partialRootPaths.5 = EXT:ws_t3bootstrap/Resources/Private/Extensions/fluid_styled_content/Partials/
+lib.contentElement.layoutRootPaths.5 = EXT:ws_t3bootstrap/Resources/Private/Extensions/fluid_styled_content/Layouts/
+
+plugin.tx_wst3bootstrap {
+
+  view {
+    templateRootPaths.2 = EXT:fluid_styled_content/Resources/Private/Templates/
+    partialRootPaths.2 = EXT:fluid_styled_content/Resources/Private/Partials/
+    layoutRootPaths.2 = EXT:fluid_styled_content/Resources/Private/Layouts/
+    layoutRootPaths.10 = EXT:ws_t3bootstrap/Resources/Private/Extensions/fluid_styled_content/Layouts/
+  }
+
+  settings {
+
+    privacyPolicies.optinVideo = {$plugin.tx_wst3bootstrap.settings.privacyPolicies.optinVideo}
+    privacyPolicies.google.defaultLang = {$plugin.tx_wst3bootstrap.settings.privacyPolicies.google.defaultLang}
+    privacyPolicies.vimeo.defaultLang = {$plugin.tx_wst3bootstrap.settings.privacyPolicies.vimeo.defaultLang}
+
+    breakpoints {
+      xs {
+        min = {$plugin.tx_wst3bootstrap.settings.breakpoints.xs}
+        max = {$plugin.tx_wst3bootstrap.settings.breakpointsMax.xs}
+        imageWidth = {$plugin.tx_wst3bootstrap.settings.breakpoints.sm}
+        mediaquery = (max-width: {$plugin.tx_wst3bootstrap.settings.breakpointsMax.xs}px)
+        cropVariant = s576
+      }
+
+      sm {
+        min = {$plugin.tx_wst3bootstrap.settings.breakpoints.sm}
+        max = {$plugin.tx_wst3bootstrap.settings.breakpointsMax.sm}
+        imageWidth = {$plugin.tx_wst3bootstrap.settings.breakpoints.sm}
+        mediaquery = (min-width: {$plugin.tx_wst3bootstrap.settings.breakpoints.sm}px) and (max-width: {$plugin.tx_wst3bootstrap.settings.breakpointsMax.sm}px)
+        cropVariant = s576
+      }
+
+      md {
+        min = {$plugin.tx_wst3bootstrap.settings.breakpoints.md}
+        max = {$plugin.tx_wst3bootstrap.settings.breakpointsMax.md}
+        imageWidth = {$plugin.tx_wst3bootstrap.settings.breakpoints.md}
+        mediaquery = (min-width: {$plugin.tx_wst3bootstrap.settings.breakpoints.md}px) and (max-width: {$plugin.tx_wst3bootstrap.settings.breakpointsMax.md}px)
+        cropVariant = s768
+      }
+
+      lg {
+        min = {$plugin.tx_wst3bootstrap.settings.breakpoints.lg}
+        max = {$plugin.tx_wst3bootstrap.settings.breakpointsMax.lg}
+        imageWidth = {$plugin.tx_wst3bootstrap.settings.breakpoints.lg}
+        mediaquery = (min-width: {$plugin.tx_wst3bootstrap.settings.breakpoints.lg}px) and (max-width: {$plugin.tx_wst3bootstrap.settings.breakpointsMax.lg}px)
+        cropVariant = s992
+      }
+
+      xl {
+        min = {$plugin.tx_wst3bootstrap.settings.breakpoints.xl}
+        max = {$plugin.tx_wst3bootstrap.settings.breakpointsMax.xl}
+        imageWidth = {$plugin.tx_wst3bootstrap.settings.breakpoints.xl}
+        mediaquery = (min-width: {$plugin.tx_wst3bootstrap.settings.breakpoints.xl}px) and (max-width: {$plugin.tx_wst3bootstrap.settings.breakpointsMax.xl}px)
+        cropVariant = s1200
+      }
+
+      xxl {
+        min = {$plugin.tx_wst3bootstrap.settings.breakpoints.xxl}
+        max = inf
+        imageWidth = {$plugin.tx_wst3bootstrap.settings.breakpoints.xxl}
+        mediaquery = (min-width: {$plugin.tx_wst3bootstrap.settings.breakpoints.xxl}px)
+        cropVariant = s1400
+      }
+
+    }
+
+    breakpointsMax {
+      xs = {$plugin.tx_wst3bootstrap.settings.breakpointsMax.xs}
+      sm = {$plugin.tx_wst3bootstrap.settings.breakpointsMax.sm}
+      md = {$plugin.tx_wst3bootstrap.settings.breakpointsMax.md}
+      lg = {$plugin.tx_wst3bootstrap.settings.breakpointsMax.lg}
+      xl = {$plugin.tx_wst3bootstrap.settings.breakpointsMax.xl}
+      xxl = {$plugin.tx_wst3bootstrap.settings.breakpointsMax.xxl}
+    }
+
+    containerWidths {
+      sm = {$plugin.tx_wst3bootstrap.settings.containerWidths.sm}
+      md = {$plugin.tx_wst3bootstrap.settings.containerWidths.md}
+      lg = {$plugin.tx_wst3bootstrap.settings.containerWidths.lg}
+      xl = {$plugin.tx_wst3bootstrap.settings.containerWidths.xl}
+      xxl = {$plugin.tx_wst3bootstrap.settings.containerWidths.xxl}
+    }
+
+    containerlessBreakpoints < plugin.tx_wst3bootstrap.settings.breakpoints
+    containerlessBreakpoints {
+      sm {
+        imageWidth = {$plugin.tx_wst3bootstrap.settings.breakpoints.md}
+        cropVariant = s768
+      }
+
+      md {
+        imageWidth = {$plugin.tx_wst3bootstrap.settings.breakpoints.lg}
+        cropVariant = s992
+      }
+
+      lg {
+        imageWidth = {$plugin.tx_wst3bootstrap.settings.breakpoints.xl}
+        cropVariant = s1200
+      }
+
+      xl {
+        imageWidth = {$plugin.tx_wst3bootstrap.settings.breakpoints.xxl}
+        mediaquery = (min-width: {$plugin.tx_wst3bootstrap.settings.breakpoints.xl}px) and (max-width: {$plugin.tx_wst3bootstrap.settings.breakpointsMax.xl}px)
+        cropVariant = s1400
+      }
+
+      xxl {
+        min = {$plugin.tx_wst3bootstrap.settings.breakpoints.xxl}
+        max = {$plugin.tx_wst3bootstrap.settings.breakpointsMax.xxl}
+        imageWidth = {$plugin.tx_wst3bootstrap.settings.breakpoints.xxl}
+        mediaquery = (min-width: {$plugin.tx_wst3bootstrap.settings.breakpoints.xxl}px)
+        cropVariant = full
+      }
+
+      full {
+        min = {$plugin.tx_wst3bootstrap.settings.breakpoints.xxl}
+        max = inf
+        imageWidth = {$plugin.tx_wst3bootstrap.settings.imageFullWidth}
+        mediaquery = (min-width: {$plugin.tx_wst3bootstrap.settings.breakpoints.xxl}px)
+        cropVariant = full
+      }
+
+    }
+
+    imageFullWidth = {$plugin.tx_wst3bootstrap.settings.imageFullWidth}
+
+    fullwidthClass = {$plugin.tx_wst3bootstrap.settings.fullwidthClass}
+
+    gridColumns = {$plugin.tx_wst3bootstrap.settings.gridColumns}
+
+    defaultGridLayout = {$plugin.tx_wst3bootstrap.settings.defaultGridLayout}
+
+    font-size-root = {$plugin.tx_wst3bootstrap.settings.font-size-root}
+
+    cropVariantFullWidth = {$plugin.tx_wst3bootstrap.settings.cropVariantFullWidth}
+
+    icon {
+      rendering = {$plugin.tx_wst3bootstrap.settings.icon.rendering}
+      defaultSize = {$plugin.tx_wst3bootstrap.settings.icon.defaultSize}
+      defaultColor = {$plugin.tx_wst3bootstrap.settings.icon.defaultColor}
+    }
+
+
+    # Abstände für Inhaltselemente
+    content {
+      padding {
+        top = {$plugin.tx_wst3bootstrap.settings.content.padding.top}
+        bottom = {$plugin.tx_wst3bootstrap.settings.content.padding.bottom}
+      }
+
+      margin {
+        top = {$plugin.tx_wst3bootstrap.settings.content.margin.top}
+        bottom = {$plugin.tx_wst3bootstrap.settings.content.margin.bottom}
+      }
+
+      types {
+
+        wst3bootstrap_fluidrow {
+          margin {
+            bottom = none
+          }
+        }
+
+        wst3bootstrap_container {
+          margin {
+            bottom = none
+          }
+        }
+
+        wst3bootstrap_buttonlink {
+          margin {
+            bottom = small
+          }
+        }
+
+        wst3bootstrap_megamenu {
+          margin {
+            bottom = none
+          }
+        }
+
+        card {
+          margin {
+            bottom = none
+          }
+        }
+
+        div {
+          margin {
+            top = small
+            bottom = small
+          }
+        }
+
+        header {
+          margin {
+            bottom = none
+          }
+        }
+
+      }
+    }
+
+  }
+}
+
+
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ws_t3bootstrap/Configuration/TypoScript/ContentElement/" extensions="typoscript">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ws_t3bootstrap/Configuration/TypoScript/Plugin/" extensions="typoscript">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ws_t3bootstrap/Configuration/TypoScript/AjaxMenu/" extensions="typoscript">
+
+

@@ -1,0 +1,3 @@
+
+# cat=Frontend; type=boolean; label=Use tidy: Compress and beautify the HTML code
+tidy = 0

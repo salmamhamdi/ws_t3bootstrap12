@@ -1,0 +1,108 @@
+############################
+#### CTYPE: card ####
+############################
+
+tt_content.card >
+tt_content.card =< lib.contentElement
+tt_content.card {
+
+
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = Card
+
+    ##########################
+    ### DATA PREPROCESSING ###
+    ##########################
+    dataProcessing {
+
+        20 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        20 {
+            table = tx_wst3bootstrap_card_element
+            pidInList.field = pid
+            where {
+                data = field:uid
+                intval = 1
+                wrap = field = 'frontside' AND tt_content=|
+            }
+            orderBy = sorting
+            as = frontsideElements
+
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = assets
+                    as = media
+                }
+
+                40 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
+                40 {
+                    if {
+                        value = 2
+                        isLessThan.field = bullets_type
+                    }
+                    fieldName = bodytext
+                    removeEmptyEntries = 1
+                    as = bullets
+                }
+                50 = TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor
+                50 {
+                    fieldName = bodytext
+                    if {
+                        value = 2
+                        equals.field = bullets_type
+                    }
+                    fieldDelimiter = |
+                    as = bullets
+                }
+
+            }
+        }
+
+
+        30 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        30 {
+            table = tx_wst3bootstrap_card_element
+            pidInList.field = pid
+            where {
+                data = field:uid
+                intval = 1
+                wrap = field = 'backside' AND tt_content=|
+            }
+            orderBy = sorting
+            as = backsideElements
+
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = assets
+                    as = media
+                }
+
+                40 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
+                40 {
+                    if {
+                        value = 2
+                        isLessThan.field = bullets_type
+                    }
+                    fieldName = bodytext
+                    removeEmptyEntries = 1
+                    as = bullets
+                }
+                50 = TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor
+                50 {
+                    fieldName = bodytext
+                    if {
+                        value = 2
+                        equals.field = bullets_type
+                    }
+                    fieldDelimiter = |
+                    as = bullets
+                }
+
+            }
+        }
+
+    }
+}

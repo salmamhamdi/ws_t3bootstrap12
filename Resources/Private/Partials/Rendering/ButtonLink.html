@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:section name="Main">
+    <f:render section="Button" arguments="{_all}"/>
+</f:section>
+
+<f:section name="Button">
+
+    <f:if condition="{titleType} == 'popover'">
+        <f:then>
+            <v:tag name="{f:if(condition: '{v:variable.register.get(name: \'hasButtonGroup\')}',then:'',else:'div')}" class="{f:if(condition: '{v:variable.register.get(name: \'containerless\')}',then:'container ')}{record.frame_classes}{f:if(condition:buttonAlignment,then:' text-{buttonAlignment}')}">
+                <button id="c{f:if(condition:data._LOCALIZED_UID,then:data._LOCALIZED_UID,else:record.uid)}" href="{f:uri.typolink(parameter:target)}"
+                        class="btn btn-{size} btn-{f:if(condition:outline,then:'outline-')}{class} {f:if(condition: block, then: 'btn-block')} {additionalClassNames}"
+                        title="{title}" data-bs-toggle="popover" data-bs-placement="{tooltipPosition}" data-bs-content="{popoverContent}">
+                    <f:render section="Text" arguments="{_all}"/>
+                </button>
+            </v:tag>
+        </f:then>
+        <f:else>
+
+            <v:tag name="{f:if(condition: '{v:variable.register.get(name: \'hasButtonGroup\')}',then:'',else:'div')}" class="{f:if(condition: '{v:variable.register.get(name: \'containerless\')}',then:'container ')}{record.frame_classes}{f:if(condition:buttonAlignment,then:' text-{buttonAlignment}')}">
+                <f:link.typolink class="btn btn-{size} btn-{f:if(condition:outline,then:'outline-')}{class} {f:if(condition: block, then: 'btn-block')} {additionalClassNames}" additionalAttributes="{record.processedData.additionalAttributes}" parameter="{target}">
+                    <f:render section="Text" arguments="{_all}"/>
+                </f:link.typolink>
+            </v:tag>
+        </f:else>
+    </f:if>
+
+</f:section>
+
+<f:section name="Text">
+    <f:if condition="{iconClass} && !{iconPlacement} && !{record.processedData.buttonIcon.available}">
+        <i class="{iconClass}"></i>
+    </f:if>
+    <f:if condition="{record.processedData.buttonIcon.available} && !{iconPlacement}">
+        <span class="icon">{record.processedData.buttonIcon.svg -> f:format.raw()}</span>
+    </f:if>
+    <f:if condition="{text}">
+        <span>{text}</span>
+    </f:if>
+    <f:if condition="{iconClass} && {iconPlacement} && !{record.processedData.buttonIcon.available}">
+        <i class="{iconClass}"></i>
+    </f:if>
+    <f:if condition="{record.processedData.buttonIcon.available} && {iconPlacement}">
+        <span class="icon">{record.processedData.buttonIcon.svg -> f:format.raw()}</span>
+    </f:if>
+</f:section>
+
+</html>

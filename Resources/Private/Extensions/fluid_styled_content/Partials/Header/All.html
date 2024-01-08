@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{data.header_layout} != 100">
+
+    <f:if condition="{data.header} || {data.subheader} || {data.date}">
+
+        <div class="ce-header h{f:if(condition:data.header_layout,then:data.header_layout,else:settings.defaultHeaderType)}-mb ce-header-{f:if(condition:data.header_position,then:data.header_position,else:'left')}">
+            <f:if condition="{icon.codePosition} == 'headline'">
+                <f:render partial="Icon" arguments="{_all}"/>
+            </f:if>
+            <div class="ce-headline">
+                <f:render partial="Header/Header" arguments="{
+					header: data.header,
+					layout: data.header_layout,
+					positionClass: '',
+					link: data.header_link,
+					default: settings.defaultHeaderType}"/>
+                <f:render partial="Header/SubHeader" arguments="{
+					subheader: data.subheader,
+					layout: data.header_layout,
+					positionClass: '',
+					default: settings.defaultHeaderType}"/>
+                <f:render partial="Header/Date" arguments="{
+					date: data.date,
+					positionClass: ''}"/>
+            </div>
+        </div>
+    </f:if>
+</f:if>
+</html>

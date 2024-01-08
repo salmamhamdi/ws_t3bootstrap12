@@ -1,0 +1,38 @@
+
+# Hier werden die Text/Medien Layouts für Redakteure freigeschaltet
+TCEFORM.tt_content.grid_layout.addItems {
+
+    50t:50g = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.50t-50g
+    50g:50t = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.50g-50t
+
+    50m:50g = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.50m-50g
+    50g:50m = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.50g-50m
+
+    66t:33g = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.66t-33g
+    33g:66t = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.33g-66t
+
+    33g:66t-f = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.33g-66t-f
+    66t:33g-f = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.66t-33g-f
+
+    50g:50t-f = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.50g-50t-f
+    50t:50g-f = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.50t-50g-f
+
+    33t:66g = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.33t-66g
+    66g:33t = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.66g-33t
+
+    100t:100g = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.100t-100g
+    100g:100t = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.100g-100t
+
+    100m:100g = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.100m-100g
+
+    33m:33t:33g = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.33m-33t-33g
+
+    50t:50mb = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.50t-50mb
+    50mb:50t = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:grid_layout.50mb-50t
+
+}
+
+TCEFORM.tt_content.grid_layout_responsive_bg.addItems {
+  overlay-dark = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:tt_content.gridLayout_responsive_bg.dark-overlay
+  overlay-bright = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:tt_content.gridLayout_responsive_bg.bright-overlay
+}

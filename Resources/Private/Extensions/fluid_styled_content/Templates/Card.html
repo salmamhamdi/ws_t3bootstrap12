@@ -1,0 +1,54 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Card"/>
+
+<f:section name="Main">
+
+    <f:render partial="Assets" section="Card" arguments="{_all}" optional="true" />
+
+    <f:if condition="{effects.flip}">
+        <f:then>
+            <div class="flip-card-inner">
+
+                <div class="flip-card-front">
+                    <div class="card">
+                        <f:render partial="Card/Header" section="Main" arguments="{data:data, settings:settings}"/>
+                        <f:render partial="Card/Body" section="Main" arguments="{elements:frontsideElements, settings:settings, backgroundMedia:backgroundMedia}"/>
+                        <f:render partial="Card/Footer" section="Main" arguments="{data:data, settings:settings}"/>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <div class="card">
+                        <f:render partial="Card/Header" section="Main" arguments="{data:data, settings:settings}"/>
+                        <f:render partial="Card/Body" section="Main" arguments="{elements:backsideElements, settings:settings, backgroundMedia:backgroundMedia}"/>
+                        <f:render partial="Card/Footer" section="Main" arguments="{data:data, settings:settings}"/>
+                    </div>
+                </div>
+            </div>
+
+        </f:then>
+        <f:else>
+
+            <f:render partial="Card/Header" section="Main" arguments="{data:data, settings:settings}"/>
+            <f:render partial="Card/Body" section="Main" arguments="{elements:frontsideElements, settings:settings, backgroundMedia:backgroundMedia}"/>
+            <f:render partial="Card/Footer" section="Main" arguments="{data:data, settings:settings}"/>
+
+        </f:else>
+    </f:if>
+
+    <f:if condition="{data.use_link_overlay}">
+        <f:link.typolink class="card__link_overlay" parameter="{data.header_link}">&nbsp;</f:link.typolink>
+    </f:if>
+
+</f:section>
+
+<f:section name="Header">
+
+
+</f:section>
+
+<f:section name="Footer">
+
+
+</f:section>
+
+</html>

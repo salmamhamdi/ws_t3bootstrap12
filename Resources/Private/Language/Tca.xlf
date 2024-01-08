@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-02-07T11:13:04Z" product-name="ws_t3bootstrap">
+		<header/>
+		<body>
+			<trans-unit id="wst3bootstrap_container.wizard.title">
+				<source>Container</source>
+			</trans-unit>
+			<trans-unit id="wst3bootstrap_container.wizard.description">
+				<source></source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

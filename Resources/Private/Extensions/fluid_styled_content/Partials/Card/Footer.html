@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="Main">
+
+    <f:if condition="{data.footer_layout} != 100">
+        <f:if condition="{data.footer}">
+            <div class="card-footer text-{f:if(condition:data.footer_position,then:data.footer_position,else:'left')}">
+                <f:link.typolink parameter="{data.footer_link}">{data.footer}</f:link.typolink>
+            </div>
+        </f:if>
+    </f:if>
+
+
+</f:section>
+</html>

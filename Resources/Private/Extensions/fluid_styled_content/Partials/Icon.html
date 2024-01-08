@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"  data-namespace-typo3-fluid="true">
+
+    <f:if condition="{icon}">
+
+        <f:if condition="{icon.text}">
+            <div class="ce-icon ce-icon-text ce-icon-style-{icon.style}{f:if(condition:icon.inverted,then:' ce-icon-inverted')} ce-icon-{f:if(condition:icon.inverted,then:'bg-')}color-{f:if(condition:icon.color,then:icon.color,else:settings.wst3bootstrap.icon.defaultColor)} ce-icon-size-{f:if(condition:icon.size,then:icon.size,else:settings.wst3bootstrap.icon.defaultSize)}"><span>{icon.text}</span></div>
+        </f:if>
+
+        <f:if condition="{icon.svg} && {settings.wst3bootstrap.icon.rendering} == 'svg'">
+
+            <div class="ce-icon ce-icon-style-{icon.style}{f:if(condition:icon.inverted,then:' ce-icon-inverted')} ce-icon-{f:if(condition:icon.inverted,then:'bg-')}color-{f:if(condition:icon.color,then:icon.color,else:settings.wst3bootstrap.icon.defaultColor)} ce-icon-size-{f:if(condition:icon.size,then:icon.size,else:settings.wst3bootstrap.icon.defaultSize)}"><f:format.raw>{icon.svg}</f:format.raw></div>
+
+        </f:if>
+        <f:if condition="{icon.class} && {settings.wst3bootstrap.icon.rendering} == 'iconfont'">
+
+            <i class="{icon_style} {f:if(condition:icon_inverted,then:'ce-icon-inverted')} ce-icon-{f:if(condition:icon_inverted,then:'bg-')}color-{f:if(condition:icon.color,then:icon.color,else:settings.wst3bootstrap.icon.defaultColor)} ce-icon-size-{f:if(condition:icon.size,then:icon.size,else:settings.wst3bootstrap.icon.defaultSize)} {icon.class}"></i>
+
+        </f:if>
+
+    </f:if>
+
+</html>

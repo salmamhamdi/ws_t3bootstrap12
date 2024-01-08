@@ -1,0 +1,15 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:section name="Main">
+    <ws:variable.register.set name="hasButtonGroup" value="true">
+        <div class="{record.processedData.class}" role="group">
+            <flux:content.render area="content"/>
+        </div>
+    </ws:variable.register.set>
+</f:section>
+
+</html>

@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Content"/>
+
+<f:section name="Configuration">
+    <flux:form id="well" options="{group: 'Bootstrap',icon:'content-wst3bootstrap-default'}">
+        <flux:form.option.static value="1"/>
+        <flux:grid>
+            <flux:grid.row>
+                <flux:grid.column colPos="0" name="content"/>
+            </flux:grid.row>
+        </flux:grid>
+        <flux:field.select name="wellStyle" label="Optional Well Style Class"
+                           items="small, normal, large" default="normal"/>
+    </flux:form>
+</f:section>
+
+<f:section name="Main">
+
+    <f:render partial="Rendering/Well" section="Main" arguments="{_all}"/>
+
+</f:section>
+</html>

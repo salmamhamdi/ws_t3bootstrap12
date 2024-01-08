@@ -1,0 +1,57 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Content"/>
+
+<f:section name="Configuration">
+    <flux:form id="megamenu" label="Mega menu" options="{group: 'Bootstrap',icon:'content-wst3bootstrap-default'}">
+
+        <flux:field.input name="cssClass" label="CSS Klasse"/>
+
+
+        <flux:form.section name="items">
+            <flux:form.object name="item" label="Menüpunkt">
+
+                <flux:field type="group" name="page" label="Seite" config="{allowed:'pages',maxitems:'1',minitems:'1',size:'1'}"/>
+
+                <flux:field.select name="dropdownType" emptyOption="Keines" items="{mega:'MegaMenu',classic:'Klassisch'}" label="Art des Dropdown-Menüs"/>
+
+            </flux:form.object>
+        </flux:form.section>
+
+
+        <flux:grid>
+            <f:if condition="{items}">
+                <f:for each="{items}" as="item" iteration="iteration">
+                    <f:if condition="{item.item.dropdownType} == 'mega'">
+                        <flux:grid.row>
+                            <flux:grid.column colPos="{iteration.index}" name="content.{iteration.index}" label="Seite - {ws:page.info(pageUid: item.item.page, field: 'title')}"/>
+                        </flux:grid.row>
+                    </f:if>
+                </f:for>
+            </f:if>
+        </flux:grid>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <p><b>Mega menu</b></p>
+    <f:if condition="{items}">
+
+        <f:for each="{items}" as="item" iteration="iteration">
+            {ws:page.info(pageUid: item.item.page, field: 'title')},
+        </f:for>
+
+    </f:if>
+</f:section>
+
+<f:section name="Main">
+
+    <f:render partial="Rendering/Megamenu" section="Main" arguments="{_all}"/>
+
+</f:section>
+
+</html>

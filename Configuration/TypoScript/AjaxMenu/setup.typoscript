@@ -1,0 +1,28 @@
+
+ajaxMenu = PAGE
+ajaxMenu {
+  typeNum = 1643059935
+
+  config {
+    disableAllHeaderCode = 1
+    xhtml_cleaning = none
+    admPanel = 0
+    debug = 0
+    disablePrefixComment = 1
+    metaCharset = utf-8
+    additionalHeaders.10.header = Content-Type:text/html;charset=UTF-8
+    disableBodyTag = 1
+    no_cache = 1
+  }
+
+  10 = FLUIDTEMPLATE
+  10.dataProcessing {
+    10 = WapplerSystems\WsT3bootstrap\Frontend\DataProcessing\AjaxMenuParameterProcessor
+  }
+  10 {
+    file = EXT:ws_t3bootstrap/Resources/Private/Templates/AjaxMenu/Render.html
+
+
+  }
+
+}

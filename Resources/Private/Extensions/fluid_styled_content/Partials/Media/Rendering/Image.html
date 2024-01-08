@@ -1,0 +1,5 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<ws:picture alt="{file.alternative}" containerless="{data.full_width}" id="{data.uid}-{iterator.index}" title="{file.title}" image="{file}" class="img-fluid{f:if(condition:'{gallery.position.horizontal} == \'center\'',then:' mx-auto d-block')}{f:if(condition:data.imageborder,then:' img-thumbnail')} {f:if(condition:data.image_classes,then: '{data.image_classes -> v:format.replace(substring: \',\', replacement: \' \')}')}" loading="{data.image_loading_behaviour}" />
+
+</html>

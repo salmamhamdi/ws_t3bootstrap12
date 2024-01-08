@@ -1,0 +1,15 @@
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        compareslider {
+            iconIdentifier = content-compare-slider
+            title = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:compare_slider
+            description = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:compare_slider.description
+            tt_content_defValues {
+                CType = compare_slider
+            }
+        }
+    }
+    show := addToList(compareslider)
+
+}

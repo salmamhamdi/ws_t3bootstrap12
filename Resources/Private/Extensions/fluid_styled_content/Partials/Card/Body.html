@@ -1,0 +1,64 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="Main">
+
+    <f:if condition="{backgroundMedia.0}">
+
+        <f:image image="{backgroundMedia.0}" maxWidth="600" class="card-img"/>
+
+    </f:if>
+
+    <v:tag name="{f:if(condition: '{backgroundMedia.0}',then:'div')}" class="card-img-overlay">
+
+        <f:for each="{elements}" as="element" iteration="iteration">
+
+            <f:switch expression="{element.data.CType}">
+                <f:case value="text">
+
+                    <div class="card-body">
+                        <f:render partial="Header/Header" arguments="{
+							header: element.data.header,
+							layout: element.data.header_layout,
+							positionClass: 'card-title',
+							link: element.data.header_link,
+							default: 3}"/>
+                        <f:render partial="Header/SubHeader" arguments="{
+							subheader: element.data.subheader,
+							layout: element.data.header_layout,
+							positionClass: 'card-subtitle',
+							default: 4}"/>
+
+
+                        {element.data.bodytext -> f:format.html()}
+                    </div>
+                </f:case>
+                <f:case value="list">
+
+                    <f:if condition="{element.bullets}">
+                        <ul class="list-group list-group-flush">
+                            <f:for each="{element.bullets}" as="bullet">
+                                <li class="list-group-item">{bullet}</li>
+                            </f:for>
+                        </ul>
+                    </f:if>
+
+                </f:case>
+                <f:case value="media">
+
+                    <f:if condition="{element.media.0}">
+                        <figure>
+                            <f:link.typolink parameter="{element.media.0.link}">
+                                <f:image image="{element.media.0}" maxWidth="600" class="{f:if(condition:iteration.isFirst,then:'card-img-top ')}{f:if(condition:iteration.isLast,then:'card-img-bottom ')}{f:if(condition:'!{iteration.isFirst} && !{iteration.isLast}',then:'card-img')}"/>
+                            </f:link.typolink>
+                        </figure>
+                    </f:if>
+
+                </f:case>
+            </f:switch>
+
+        </f:for>
+
+    </v:tag>
+
+</f:section>
+</html>

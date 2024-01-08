@@ -1,0 +1,37 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<f:section name="Main">
+
+    <f:render partial="Assets" section="CardsCarousel" arguments="{_all}" optional="true" />
+
+    <div class="owl-carousel cards-carousel">
+
+        <f:if condition="{records}">
+
+            <f:for each="{records}" as="item" iteration="iteration">
+
+                <div class="item" data-itemno="{iteration.index}">
+
+                    <div class="card">
+                        <div class="card-body">
+
+                            <f:link.typolink parameter="{item.data.link}">
+                                <f:if condition="{item.images.0}">
+
+                                    <f:image image="{item.images.0}" maxWidth="200" class="img-fluid mb-4"/>
+
+                                </f:if>
+
+                                <span>
+                                {item.data.header}
+                            </span>
+                            </f:link.typolink>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </f:if>
+    </div>
+
+</f:section>
+</html>

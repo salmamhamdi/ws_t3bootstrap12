@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:section name="Main">
+
+    <v:variable.set name="activeTabIndex" value="0"/>
+    <f:if condition="{tabs}">
+        <f:for each="{tabs}" as="tab" iteration="iteration">
+            <f:if condition="{tab.tab.active}">
+                <v:variable.set name="activeTabIndex" value="{iteration.cycle}"/>
+            </f:if>
+        </f:for>
+    </f:if>
+
+    <div class="tabbable tabs-{tabDirection}">
+        <f:if condition="{tabDirection} != 'below'">
+            <f:render section="Tabs" arguments="{_all}"/>
+        </f:if>
+
+        <div class="tab-content pt-2">
+            <f:if condition="{tabs}">
+                <f:for each="{tabs}" as="tab" iteration="iteration">
+                    <div role="tabpanel" class="tab-pane {f:if(condition: tab.tab.fade, then: 'fade')} {f:if(condition: '{activeTabIndex} == {iteration.cycle}', then: 'active in show')}" id="tab-{record.uid}-{iteration.index}">
+                        <flux:content.render area="content.{iteration.index}"/>
+                    </div>
+                </f:for>
+            </f:if>
+        </div>
+
+        <f:if condition="{tabDirection} == 'below'">
+            <f:render section="Tabs" arguments="{_all}"/>
+        </f:if>
+    </div>
+</f:section>
+
+<f:section name="Tabs">
+    <f:if condition="{tabs}">
+        <ul role="tablist" class="nav nav-{mode}s {f:if(condition: stackable, then: 'nav-stacked')} {position} m-b">
+            <f:for each="{tabs}" as="tab" iteration="iteration">
+                <li class="nav-item">
+                    <a class="nav-link {f:if(condition: '{activeTabIndex} == {iteration.cycle}', then: 'active')}" role="tab" href="#tab-{record.uid}-{iteration.index}" data-bs-toggle="{mode}">{tab.tab.title}</a>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</f:section>
+
+</html>

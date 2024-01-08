@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Content"/>
+
+<f:section name="Configuration">
+    <flux:form id="container" label="Container" options="{group: 'Bootstrap',icon:'content-wst3bootstrap-default'}">
+        <flux:grid>
+            <flux:grid.row>
+                <flux:grid.column colPos="0" label="Container-Inhalt" name="content"/>
+            </flux:grid.row>
+        </flux:grid>
+        <flux:field.select label="LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.container.fields.type" name="type" items="container,container-sm,container-md,container-lg,container-xl,container-fluid" default="container"/>
+
+    </flux:form>
+</f:section>
+
+
+<f:section name="Main">
+
+    <f:render partial="Rendering/Container" section="Main" arguments="{_all}"/>
+
+</f:section>
+</html>

@@ -1,0 +1,74 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+{namespace ws=WapplerSystems\WsT3bootstrap\ViewHelpers}
+
+{v:variable.register.get(name:'xsScale') -> v:variable.set(name: 'xsScale')}
+{v:variable.register.get(name:'smScale') -> v:variable.set(name: 'smScale')}
+{v:variable.register.get(name:'mdScale') -> v:variable.set(name: 'mdScale')}
+{v:variable.register.get(name:'lgScale') -> v:variable.set(name: 'lgScale')}
+{v:variable.register.get(name:'xlScale') -> v:variable.set(name: 'xlScale')}
+{v:variable.register.get(name:'xxlScale') -> v:variable.set(name: 'xxlScale')}
+
+<f:switch expression="{imgTag}">
+    <f:case value="scaled">
+        <f:image title="{f:if(condition:title,then:title,else:image.title)}"
+                 alt="{f:if(condition:alt,then:alt,else:'{f:if(condition: image.alternative, then: image.alternative, else: image.name)} {image.creator} {image.source}')}"
+                 image="{image}" class="{class}" />
+    </f:case>
+    <f:case value="img">
+
+        <v:variable.set name="max-md" value="{breakpoints.md.max -> v:math.product(b: mdScale) -> v:math.ceil()}"/>
+        <img src="{f:uri.image(image:image,maxWidth:max-md) -> v:format.url.decode()}"
+             alt="{f:if(condition:alt,then:alt,else:'{f:if(condition: image.alternative, then: image.alternative, else: image.name)} {image.creator} {image.source}')}"
+             title="{f:if(condition:title,then:title,else:image.title)}"
+             class="{class}" id="image-{id}" loading="{loading}" {additionalAttributes}/>
+
+    </f:case>
+    <f:defaultCase>
+
+        <picture id="picture-{id}">
+
+            <f:comment>special: full width images for very large screens</f:comment>
+            <f:if condition="{breakpoints.full}">
+                <!-- {breakpoints.xxl.min}px - inf, cropVariant={cropVariants.full} -->
+                <ws:picture.source ratioToCSS="true" id="picture-{id}" image="{image}" maxWidth="{settings.imageFullWidth}" scale="{xxlScale}" cropVariant="{cropVariants.full}" media="{breakpoints.full.mediaquery}"/>
+            </f:if>
+
+            <f:comment>XXL</f:comment>
+            <!-- {breakpoints.xxl.min}px - inf, cropVariant={cropVariants.xxl} -->
+            <ws:picture.source ratioToCSS="true" id="picture-{id}" image="{image}" maxWidth="{breakpoints.xxl.imageWidth}" scale="{xxlScale}" cropVariant="{cropVariants.xxl}" media="{breakpoints.xxl.mediaquery}"/>
+
+            <f:comment>XL</f:comment>
+            <!-- {breakpoints.xl.min}px - {breakpoints.xl.max}px, cropVariant={cropVariants.xl} -->
+            <ws:picture.source ratioToCSS="true" id="picture-{id}" image="{image}" maxWidth="{breakpoints.xl.imageWidth}" scale="{xlScale}" cropVariant="{cropVariants.xl}" media="{breakpoints.xl.mediaquery}"/>
+
+            <f:comment>LG</f:comment>
+            <!-- {breakpoints.lg.min}px - {breakpoints.lg.max}px, cropVariant={cropVariants.lg} -->
+            <ws:picture.source ratioToCSS="true" id="picture-{id}" image="{image}" maxWidth="{breakpoints.lg.imageWidth}" scale="{lgScale}" cropVariant="{cropVariants.lg}" media="{breakpoints.lg.mediaquery}"/>
+
+            <f:comment>MD</f:comment>
+            <!-- {breakpoints.md.min}px - {breakpoints.md.max}px, cropVariant={cropVariants.md} -->
+            <ws:picture.source ratioToCSS="true" id="picture-{id}" image="{image}" maxWidth="{breakpoints.md.imageWidth}" scale="{mdScale}" cropVariant="{cropVariants.md}" media="{breakpoints.md.mediaquery}"/>
+
+            <f:comment>SM</f:comment>
+            <!-- {breakpoints.sm.min}px - {breakpoints.sm.max}px, cropVariant={cropVariants.sm} -->
+            <ws:picture.source ratioToCSS="true" id="picture-{id}" image="{image}" maxWidth="{breakpoints.sm.imageWidth}" scale="{smScale}" cropVariant="{cropVariants.sm}" media="{breakpoints.sm.mediaquery}"/>
+
+            <f:comment>XS</f:comment>
+            <!-- 0px - {breakpoints.xs.max}px, cropVariant={cropVariants.xs}, imageWidth={breakpoints.xs.imageWidth} -->
+            <f:comment>Nicht mittels f:image ausgeben, weil ansonsten die width und height Attribute ausgegeben werden</f:comment>
+
+            <img src="{f:uri.image(image:image,maxWidth:breakpoints.xs.imageWidth,cropVariant:cropVariants.xs)}"
+                 alt="{f:if(condition:alt,then:alt,else:'{f:if(condition:image.alternative, then:image.alternative, else:image.name)} {image.creator} {image.source}')}"
+                 title="{f:if(condition:title,then:title,else:image.title)}"
+                 class="{class}" id="img-{id}" loading="{loading}" {additionalAttributes}/>
+            <f:variable name="ratio">{ws:media.image.ratio(image:image,maxWidth:breakpoints.xs.imageWidth,cropVariant:cropVariants.xs)}</f:variable>
+            <f:asset.css identifier="{id}">
+@media {breakpoints.xs.mediaquery}{
+#picture-{id} {aspect-ratio:{ratio}; }}
+            </f:asset.css>
+
+        </picture>
+
+
+    </f:defaultCase>
+</f:switch>

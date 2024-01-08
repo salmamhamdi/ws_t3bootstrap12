@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      xmlns:wsscss="http://typo3.org/ns/WapplerSystems/WsScss/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:render partial="Assets" optional="true" section="Video" arguments="{_all}" />
+
+<figure class="video">
+
+    <f:if condition="{data.image_zoom}">
+        <f:then>
+
+            <ws:link.clickEnlarge media="{file}" configuration="{settings.media.popup}">
+                <f:if condition="{file.properties.poster.0}">
+                    <f:then>
+                        <f:render partial="Media/Rendering/Image" arguments="{data:data, file: file.properties.poster.0, dimensions: dimensions, settings: settings, iterator:iterator}"/>
+                    </f:then>
+                    <f:else>
+                        <span class="ratio ratio-{f:if(condition:file.properties.aspect_ratio,then:'{file.properties.aspect_ratio -> v:format.replace(substring:\':\',replacement:\'x\')}',else:'16x9')}">
+                            <span class="poster-dummy"></span>
+                        </span>
+
+                    </f:else>
+                </f:if>
+            </ws:link.clickEnlarge>
+        </f:then>
+        <f:else>
+            <div class="ratio ratio-{f:if(condition:file.properties.aspect_ratio,then:'{file.properties.aspect_ratio -> v:format.replace(substring:\':\',replacement:\'x\')}',else:'16x9')}">
+                <f:render partial="Media/Rendering/Video" arguments="{file: file, dimensions: dimensions, settings: settings}"/>
+            </div>
+        </f:else>
+    </f:if>
+
+    <f:if condition="{file.description}">
+        <figcaption class="video-caption">
+            {file.description}
+        </figcaption>
+    </f:if>
+</figure>
+</html>

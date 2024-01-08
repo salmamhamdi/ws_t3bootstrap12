@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Content"/>
+
+
+<f:section name="Configuration">
+
+
+    <flux:form id="cards" options="{group: 'Bootstrap',icon:'content-wst3bootstrap-default'}">
+
+        <flux:form.sheet name="general">
+            <flux:field type="select" config="{renderType:'selectSingle'}" name="layout"/>
+        </flux:form.sheet>
+
+        <flux:form.sheet name="gridOptions">
+            <flux:field type="select" config="{renderType:'selectSingle'}" name="gridXs"/>
+            <flux:field type="select" config="{renderType:'selectSingle'}" name="gridSm"/>
+            <flux:field type="select" config="{renderType:'selectSingle'}" name="gridMd"/>
+            <flux:field type="select" config="{renderType:'selectSingle'}" name="gridLg"/>
+            <flux:field type="select" config="{renderType:'selectSingle'}" name="gridXl"/>
+            <flux:field type="select" config="{renderType:'selectSingle'}" name="gridXxl"/>
+            <flux:field type="select" config="{renderType:'selectSingle'}" name="gutter"/>
+        </flux:form.sheet>
+
+
+        <flux:grid>
+            <flux:grid.row>
+                <flux:grid.column colPos="0" name="cards" label="Cards">
+                    <flux:form.variable name="allowedContentTypes" value="card"/>
+                </flux:grid.column>
+            </flux:grid.row>
+        </flux:grid>
+    </flux:form>
+
+</f:section>
+
+<f:section name="Main">
+
+    <f:render partial="Rendering/Cards" section="Main" arguments="{_all}"/>
+
+</f:section>
+
+</html>

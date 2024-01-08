@@ -1,0 +1,20 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+<f:section name="Main">
+
+    <f:render partial="Assets" section="CompareSlider" arguments="{_all}" optional="true" />
+
+    <div class="compare-slider beforeafterdefault">
+        <div data-type="data-type-image">
+            <div data-type="before">
+                <f:image image="{media.0}" class=""/>
+            </div>
+            <div data-type="after">
+                <f:image image="{media.1}" class=""/>
+            </div>
+        </div>
+    </div>
+
+</f:section>
+</html>

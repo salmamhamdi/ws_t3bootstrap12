@@ -1,0 +1,14 @@
+tt_content.wst3bootstrap_buttonlink {
+
+  dataProcessing {
+
+    880 = WapplerSystems\WsT3bootstrap\Frontend\DataProcessing\FlexFormProcessor
+    880.as = flexformValues
+
+    881 = WapplerSystems\WsT3bootstrap\Frontend\DataProcessing\ButtonProcessor
+
+    882 = WapplerSystems\WsT3bootstrap\Frontend\DataProcessing\IconProcessor
+    882.fieldName = flexformValues.icon
+    882.as = data.processedData.buttonIcon
+  }
+}

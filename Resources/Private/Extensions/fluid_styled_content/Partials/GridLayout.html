@@ -1,0 +1,63 @@
+<html lang="en" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{gridLayoutColumns}">
+    <f:then>
+        <div class="{f:if(condition:'!{floating}', then: 'row ')}layout-{layoutKey}{f:if(condition: data.imageborder, then: ' ce-border')}{f:if(condition:floating, then: ' ce-floating')}">
+            <f:for each="{gridLayoutColumns}" as="column" iteration="iterator">
+                <ws:column xs="{column.xs.cols}" xs-order="{column.xs.order}"
+                           sm="{column.sm.cols}" sm-order="{column.sm.order}"
+                           md="{column.md.cols}" md-order="{column.md.order}"
+                           lg="{column.lg.cols}" lg-order="{column.lg.order}"
+                           xl="{column.xl.cols}" xl-order="{column.xl.order}"
+                           tag="{f:if(condition:'{floating} && {column.isText}',then:'',else:'div')}"
+                           class="column-{iterator.index}{f:if(condition:column.asBackground,then:' bg-column')}{f:if(condition: '{column.isSingleMedia} || {column.isGallery}',then:' col-type-media')}" id="c{data.uid}-c{iterator.index}">
+
+                    <f:if condition="{column.isText} && {data.bodytext}">
+                        <div class="ce-bodytext">
+                            <f:format.html>{data.bodytext}</f:format.html>
+                        </div>
+                    </f:if>
+                    <f:if condition="{column.isSingleMedia} && {column.files}">
+                        <f:if condition="{column.asBackground}">
+                            <f:then>
+                                <ws:backgroundImage containerless="{f:if(condition:data.fixed_image,then:'true',else:'false')}" selector="#c{data.uid}-c{iterator.index}" image="{column.files}"/>
+                                <f:alias map="{file:column.files}">
+                                    <f:if condition="{file.link}">
+                                        <f:link.typolink class="imagelink-placeholder" parameter="{file.link}" title="{file.title}">
+                                        </f:link.typolink>
+                                    </f:if>
+                                </f:alias>
+                            </f:then>
+                            <f:else>
+                                <f:render partial="Media/Type" arguments="{file: column.files, data: data, settings: settings}"/>
+                            </f:else>
+                        </f:if>
+                    </f:if>
+                    <f:if condition="{column.isGallery}">
+                        <f:render partial="Media/Gallery" arguments="{_all}"/>
+                    </f:if>
+                </ws:column>
+
+            </f:for>
+        </div>
+
+    </f:then>
+    <f:else>
+        <f:comment>Fallback</f:comment>
+
+        <f:if condition="{data.CType} == 'textmedia' || {data.CType} == 'textpic'">
+            <f:if condition="{data.bodytext}">
+                <div class="ce-bodytext">
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </div>
+            </f:if>
+        </f:if>
+        <div class="ce-gallery">
+            <f:render partial="Media/Gallery" arguments="{_all}"/>
+        </div>
+
+
+    </f:else>
+</f:if>
+
+</html>

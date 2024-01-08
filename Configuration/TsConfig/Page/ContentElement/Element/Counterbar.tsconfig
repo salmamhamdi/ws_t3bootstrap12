@@ -1,0 +1,15 @@
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        counterbar {
+            iconIdentifier = counter-bar
+            title = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:counterbar.title
+            description = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:counterbar.description
+            tt_content_defValues {
+                CType = counter_bar
+            }
+        }
+    }
+    show := addToList(counterbar)
+
+}

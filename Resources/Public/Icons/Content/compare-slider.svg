@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://t3bootstrap.de" viewBox="0 0 32 32" width="32" height="32">
+    <rect y="0" width="32" height="32" style="fill: rgba(0, 100, 200, 0.125); stroke: rgb(200, 200, 200);" bx:origin="0.5 0.5"/>
+    <path style="fill: rgb(100, 40, 20);" d="M 16.611 15.612 L 12.596 32.035 L 20.747 31.955 L 17.414 28.1 L 16.892 23.562 L 17.254 17.017 L 17.254 15.772 L 16.611 15.612 Z" />
+    <path style="fill: rgb(150, 80, 50);" d="M 12.797 14.447 L 12.877 22.639 L 11.471 28.18 L 9.303 31.955 L 12.515 31.995 L 17.173 13.202 L 12.797 14.447 Z"/>
+    <path style="fill: rgba(0, 0, 0, 0); stroke: rgb(0, 0, 0); paint-order: stroke; stroke-linecap: round;" d="M 9.581 31.473 L 11.97 27.209 L 12.736 20.152 L 12.793 14.528"/>
+    <path style="fill: rgb(0, 216, 50); stroke: rgb(0, 0, 0); paint-order: stroke;" d="M 13.418 14.94 C 11.906 22.152 10.952 14.403 9.266 16.735 C 7.58 19.067 1.993 15.421 6.741 11.124 C 0.858 10.367 6.756 4.55 9.284 6.325" transform="matrix(0.984103, 0.177596, -0.177596, 0.984103, 2.278618, -1.374343)"/>
+    <path style="fill: rgb(0, 216, 50); paint-order: stroke;" d="M 10.749 8.665 L 18.78 4.529 C 18.78 4.529 17.214 11.958 17.093 11.958 C 16.972 11.958 11.632 12.319 11.632 12.319 L 10.749 8.665 Z" />
+    <path style="fill: rgb(0, 216, 50); stroke: rgb(0, 0, 0); paint-order: stroke;" d="M 10.749 12.199 C 8.662 13.144 11.174 15.313 14.684 13.724 C 16.538 14.585 17.271 11.988 16.169 11.476" />
+    <path style="fill: rgba(0, 0, 0, 0); stroke: rgb(0, 0, 0); paint-order: stroke; stroke-linecap: round;" d="M 17.443 14.527 L 17.207 19.804 L 16.932 24.697 L 17.749 27.856 L 20.506 31.593" />
+    <path style="fill: rgb(216, 90, 50); stroke: rgb(0, 0, 0); paint-order: stroke;" d="M 19.101 3.565 C 20.243 0.927 24.635 2.059 22.715 6.496 C 24.526 5.433 27.969 8.924 24.923 10.712 C 25.648 11.679 20.788 12.416 20.626 12.199 C 23.357 12.199 23.719 15.651 20.988 15.651 C 19.917 16.454 16.183 15.129 17.254 14.326"/>
+    <path style="fill: rgb(0, 216, 50); paint-order: stroke; stroke: rgb(0, 0, 0);" d="M 11.27 8.465 C 6.464 7.894 9.065 1.994 11.23 3.766 C 11.91 -0.448 18.263 2.356 16.491 4.128 C 17.857 3.245 18.426 2.255 19.221 4.489" />
+    <path style="fill: rgb(230, 230, 230); paint-order: fill; stroke: rgb(0, 0, 0); stroke-width: 2; stroke-linecap: round;" d="M 20.02 0.835 L 12.552 32.437" />
+</svg>

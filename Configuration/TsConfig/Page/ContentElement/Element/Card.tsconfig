@@ -1,0 +1,15 @@
+
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        card {
+            iconIdentifier = content-card
+            title = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:card
+            description = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/Backend.xlf:card.description
+            tt_content_defValues {
+                CType = card
+            }
+        }
+    }
+    show := addToList(card)
+
+}

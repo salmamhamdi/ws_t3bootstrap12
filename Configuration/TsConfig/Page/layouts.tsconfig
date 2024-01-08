@@ -1,0 +1,18 @@
+
+TCEFORM.tt_content {
+
+
+    layout.removeItems = 1,2,3
+
+
+    layout.addItems {
+        #80 = Doppelte Linie
+        #81 = Doppelt gestrichelte Linie
+        #82 = Doppelt gepunktete Linie
+
+        #83 = Einfache Linie
+        #84 = Gestrichelte Linie
+        #85 = Gepunktete Linie
+    }
+
+}

@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+
+    <v:tag class="{frame_classes}" id="c{data.uid}" name="{data.html_tag}" data="{data_attributes}">
+        <f:if condition="{data._LOCALIZED_UID}">
+            <a id="c{data._LOCALIZED_UID}"></a>
+        </f:if>
+
+        <f:render section="Main" optional="true"/>
+    </v:tag>
+
+</f:spaceless>
+</html>

@@ -1,0 +1,15 @@
+
+
+TCEFORM.tt_content.icon_position.addItems {
+    0 = Icon links in Überschrift
+
+    11 = Icon links in Überschrift mit Linie
+
+    20 = Icon links neben Block
+    21 = Icon rechts neben Block
+
+    30 = Icon links über Überschrift
+    31 = Icon rechts über Überschrift
+
+    40 = Icon zentriert über Überschrift
+}

@@ -1,0 +1,181 @@
+plugin.tx_wst3bootstrap.settings.gridLayouts {
+
+  # Ausgegeben wird immer: Text, gefolgt von Einzel-Bild/Video falls gewünscht, gefolgt von Galerie
+  # ungeachtet des Keys
+  # Die Anzeigereihenfolge wird immer mittels order korrigiert
+
+  50t:50g {
+    breakPoints {
+      md {
+        columns = 6,6
+        orders = 1,0
+      }
+    }
+  }
+
+  50g:50t {
+    breakPoints {
+      xs {
+        orders = 1,0
+      }
+
+      md {
+        columns = 6,6
+        orders = 0,1
+      }
+    }
+  }
+
+  50t:50g-f {
+    breakPoints {
+      md {
+        columns = 6,6
+        orders = 1,0
+      }
+    }
+  }
+
+  50g:50t-f {
+    breakPoints {
+      xs {
+        orders = 1,0
+      }
+
+      md {
+        columns = 6,6
+        orders = 0,1
+      }
+    }
+  }
+
+  50m:50g {
+    breakPoints {
+      md {
+        columns = 6,6
+        orders = 0,1
+      }
+    }
+  }
+
+  50g:50m {
+    breakPoints {
+      md {
+        columns = 6,6
+        orders = 1,0
+      }
+    }
+  }
+
+  66t:33g {
+    breakPoints {
+      md {
+        columns = 4,8
+        orders = 1,0
+      }
+    }
+  }
+
+  33g:66t {
+    breakPoints {
+      md {
+        columns = 4,8
+        orders = 0,1
+      }
+    }
+  }
+
+  33g:66t-f {
+    breakPoints {
+      md {
+        columns = 4,8
+      }
+    }
+  }
+
+  66t:33g-f {
+    breakPoints {
+      md {
+        columns = 4,8
+      }
+    }
+  }
+
+  33t:66g {
+    # Text links [4], Galerie rechts [8]
+    breakPoints {
+      md {
+        columns = 8,4
+        orders = 1,0
+      }
+    }
+  }
+
+  66g:33t {
+    breakPoints {
+      md {
+        columns = 8,4
+        orders = 0,1
+      }
+    }
+  }
+
+  100t:100g {
+    breakPoints {
+      xs {
+        orders = 1,0
+      }
+    }
+  }
+
+  100m:100g {
+    breakPoints {
+      xs {
+        orders = 0,1
+      }
+    }
+  }
+
+  100g:100t {
+    breakPoints {
+      xs {
+        orders = 0,1
+      }
+    }
+  }
+
+  33m:33t:33g {
+    breakPoints {
+      xs {
+        columns = 12,12,12
+        orders = 0,1,2
+      }
+
+      md {
+        columns = 4,4,4
+        orders = 0,2,1
+      }
+    }
+  }
+
+  50t:50mb {
+    breakPoints {
+      md {
+        columns = 6,6
+        orders = 1,0
+      }
+    }
+  }
+
+  50mb:50t {
+    breakPoints {
+      xs {
+        orders = 0,1
+      }
+
+      md {
+        columns = 6,6
+        orders = 0,1
+      }
+    }
+  }
+}

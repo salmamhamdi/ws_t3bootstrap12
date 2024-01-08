@@ -1,0 +1,216 @@
+
+imports:
+  - { resource: "./FormElements/DSGVOCheckbox.yaml" }
+
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formEditor:
+
+            translationFiles:
+              20: 'EXT:ws_t3bootstrap/Resources/Private/Language/form.xlf'
+
+            formEditorFluidConfiguration:
+              partialRootPaths:
+                30: 'EXT:form/Resources/Private/Backend/Partials/FormEditor/'
+              layoutRootPaths:
+                30: 'EXT:form/Resources/Private/Backend/Layouts/FormEditor/'
+
+            dynamicRequireJsModules:
+              additionalViewModelModules:
+                40: '@wapplersystems/ws_t3bootstrap/form-editor/view-model.js'
+
+          formElementsDefinition:
+
+            GridRow:
+              properties:
+                gridColumnClassAutoConfiguration:
+                  viewPorts:
+                    xs:
+                      classPattern: 'col-{@numbersOfColumnsToUse}'
+              variants:
+                -
+                  identifier: bs-template-variant
+                  condition: 'getRootFormProperty("renderingOptions.templateVariant") == "horizontal"'
+                  properties:
+                    fieldClassAttribute: 'row'
+                    containerClassAttribute: 'col-sm-10 offset-sm-2'
+
+            AdvancedPassword:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                labelClassAttribute: 'form-label'
+                fieldClassAttribute: 'row mb-3'
+
+            Checkbox:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                elementClassAttribute: form-check-input
+                containerClassAttribute: form-check
+                labelClassAttribute: form-check-label
+                fieldClassAttribute: 'mb-3'
+              variants:
+                -
+                  identifier: bs-template-variant
+                  condition: 'getRootFormProperty("renderingOptions.templateVariant") == "horizontal"'
+                  properties:
+                    fieldClassAttribute: 'row mb-3'
+                    labelClassAttribute: ''
+                    containerClassAttribute: form-check
+                    columnClassAttribute: 'col-sm-10 offset-sm-2'
+
+            MultiCheckbox:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                elementClassAttribute: form-check-input
+                containerClassAttribute: ~
+                labelClassAttribute: 'form-label'
+                optionLabelClassAttribute: 'form-check-label'
+                fieldClassAttribute: 'mb-3'
+              variants:
+                -
+                  identifier: bs-template-variant
+                  condition: 'getRootFormProperty("renderingOptions.templateVariant") == "horizontal"'
+                  properties:
+                    fieldClassAttribute: 'row mb-3'
+                    containerClassAttribute: 'col-sm-10'
+                    labelClassAttribute: 'form-label col-sm-2'
+
+            RadioButton:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                containerClassAttribute: ''
+                fieldClassAttribute: 'mb-3'
+                labelClassAttribute: 'form-label'
+                optionLabelClassAttribute: form-check-label
+              variants:
+                -
+                  identifier: bs-template-variant
+                  condition: 'getRootFormProperty("renderingOptions.templateVariant") == "horizontal"'
+                  properties:
+                    fieldClassAttribute: 'row mb-3'
+                    containerClassAttribute: 'col-sm-10'
+                    elementClassAttribute: form-check-input
+                    labelClassAttribute: 'col-form-label col-sm-2 pt-0'
+
+            Date:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                labelClassAttribute: 'form-label'
+                fieldClassAttribute: 'mb-3'
+
+            DatePicker:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                labelClassAttribute: 'form-label'
+                fieldClassAttribute: 'mb-3'
+
+            Email:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                labelClassAttribute: 'form-label'
+                fieldClassAttribute: 'mb-3'
+
+            FileUpload:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                elementClassAttribute: 'form-control'
+                labelClassAttribute: 'form-label'
+                fieldClassAttribute: 'mb-3'
+
+            ImageUpload:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                elementClassAttribute: 'form-control'
+                fieldClassAttribute: 'mb-3'
+
+            MultiSelect:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                labelClassAttribute: 'form-label'
+                fieldClassAttribute: 'mb-3'
+
+            Number:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                labelClassAttribute: 'form-label'
+                fieldClassAttribute: 'mb-3'
+
+            Password:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                labelClassAttribute: 'form-label'
+                fieldClassAttribute: 'mb-3'
+
+            SingleSelect:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                fieldClassAttribute: 'mb-3'
+                labelClassAttribute: 'form-label'
+                elementClassAttribute: 'form-select'
+              variants:
+                -
+                  identifier: bs-template-variant
+                  condition: 'getRootFormProperty("renderingOptions.templateVariant") == "horizontal"'
+                  properties:
+                    fieldClassAttribute: 'row mb-3'
+                    labelClassAttribute: 'col-sm-2 col-form-label'
+                    fieldsetClassAttribute: 'form-element form-element-radio mb-3'
+                    containerClassAttribute: 'col-sm-10'
+                    elementClassAttribute: 'form-select'
+
+            Telephone:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                labelClassAttribute: 'form-label'
+                fieldClassAttribute: 'mb-3'
+
+            Text:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                fieldClassAttribute: 'mb-3'
+                labelClassAttribute: 'form-label'
+                helpClassAttribute: 'form-text'
+              variants:
+                -
+                  identifier: bs-template-variant
+                  # the "renderable" variable is only available with the ws_t3bootstrap patch
+                  condition: 'getRootFormProperty("renderingOptions.templateVariant") == "horizontal" && renderable.getParentRenderable().getType() != "GridRow"'
+                  properties:
+                    fieldClassAttribute: 'row mb-3'
+                    fieldsetClassAttribute: 'form-element form-element-radio mb-3'
+                    containerClassAttribute: 'col-sm-10'
+                    labelClassAttribute: 'col-sm-2 col-form-label'
+
+            Textarea:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                labelClassAttribute: 'form-label'
+                fieldClassAttribute: 'mb-3'
+
+            Url:
+              properties:
+                elementErrorClassAttribute: is-invalid
+                labelClassAttribute: 'form-label'
+                fieldClassAttribute: 'mb-3'
+
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  60: 'EXT:ws_t3bootstrap/Resources/Private/Extensions/form/Frontend/Templates/'
+                partialRootPaths:
+                  60: 'EXT:ws_t3bootstrap/Resources/Private/Extensions/form/Frontend/Partials/'
+                translation:
+                  translationFiles:
+                    30: 'EXT:ws_t3bootstrap/Resources/Private/Language/form.xlf'
+
+          formEngine:
+            translationFiles:
+              20: 'EXT:ws_t3bootstrap/Resources/Private/Language/form.xlf'
+
+
+      formManager:
+        translationFiles:
+          20: 'EXT:ws_t3bootstrap/Resources/Private/Language/form.xlf'

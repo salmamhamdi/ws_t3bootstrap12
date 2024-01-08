@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Content"/>
+
+<f:section name="Configuration">
+    <flux:form id="buttongroup" options="{group: 'Bootstrap',icon:'content-button-group'}">
+
+        <flux:field.select name="type" items="{group:'Gruppe',grid:'Grid'}" default="group" label="Anzeigen als"/>
+
+        <flux:field.select name="direction" items="{horizontal:'Horizontal',vertical:'Vertical'}" default="horizontal" label="Richtung" displayCond="FIELD:type:=:group"/>
+
+        <flux:field.select name="alignment" items="{start:'Start',center:'Center',end:'End',block:'Block'}" default="block" label="Ausrichtung"/>
+
+        <flux:field.select name="arrangement" items="{block:'None',start:'Start',center:'Center',end:'End',space-between:'Verteilt',space-around:'Gleichmäßig verteilt'}" default="block" label="Horizontale Anordnung der Elemente (bei Ausrichtung Block)" displayCond="FIELD:type:=:grid"/>
+
+        <flux:field.select name="breakpoint" items="{xs:'XS',sm:'SM',md:'MD',lg:'LG',xl:'XL',xxl:'XXL'}" default="xs" label="Umschalten der Anordnung ab" displayCond="FIELD:type:=:grid"/>
+
+        <flux:field.select name="gap" items="{1:'1',2:'2',3:'3',4:'4'}" default="2" label="Abstand" displayCond="FIELD:type:=:grid"/>
+
+        <flux:field.select name="size" items="{sm:'SM',md:'MD',lg:'LG'}" default="md" label="Größe" displayCond="FIELD:type:=:group"/>
+
+        <flux:grid>
+            <flux:grid.row>
+                <flux:grid.column label="Buttons" colPos="0" name="content">
+                    <flux:form.variable name="allowedContentTypes" value="wst3bootstrap_buttonlink"/>
+                </flux:grid.column>
+            </flux:grid.row>
+        </flux:grid>
+    </flux:form>
+</f:section>
+
+<f:section name="Main">
+
+    <f:render partial="Rendering/ButtonGroup" section="Main" arguments="{_all}"/>
+
+</f:section>
+
+</html>

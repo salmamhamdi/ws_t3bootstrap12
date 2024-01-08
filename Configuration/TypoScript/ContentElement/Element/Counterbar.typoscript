@@ -1,0 +1,42 @@
+############################
+#### CTYPE: Counterbar ####
+############################
+
+tt_content.counter_bar >
+tt_content.counter_bar =< lib.contentElement
+tt_content.counter_bar {
+
+  layoutRootPaths.2000 = EXT:ws_t3bootstrap/Resources/Private/Extensions/fluid_styled_content/Layouts/
+
+  ################
+  ### TEMPLATE ###
+  ################
+  templateName = Counterbar
+
+  ##########################
+  ### DATA PREPROCESSING ###
+  ##########################
+  dataProcessing {
+    10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+    10 {
+      table = tx_wst3bootstrap_counterbar_item
+      pidInList.field = pid
+      where {
+        data = field:uid
+        intval = 1
+        wrap = tt_content=|
+      }
+
+      dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+          references.fieldName = image
+          as = image
+        }
+        20 = WapplerSystems\WsT3bootstrap\Frontend\DataProcessing\IconProcessor
+      }
+    }
+
+    800 = WapplerSystems\WsT3bootstrap\Frontend\DataProcessing\FlexFormProcessor
+  }
+}

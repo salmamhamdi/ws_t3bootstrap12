@@ -1,0 +1,9 @@
+
+tt_content.wst3bootstrap_fluidrow {
+
+    dataProcessing {
+
+        880 = WapplerSystems\WsT3bootstrap\Frontend\DataProcessing\FlexFormProcessor
+        881 = WapplerSystems\WsT3bootstrap\Frontend\DataProcessing\FluidRowProcessor
+    }
+}

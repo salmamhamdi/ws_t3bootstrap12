@@ -1,0 +1,31 @@
+tt_content {
+
+  uploads.dataProcessing.10.sorting.direction.field = filelink_sorting_direction
+
+  # set special template for button
+  wst3bootstrap_buttonlink.templateName = Flux
+
+}
+
+tt_content.textpic.dataProcessing {
+  19 = WapplerSystems\WsT3bootstrap\Frontend\DataProcessing\GridLayoutProcessor
+}
+
+tt_content.textmedia.dataProcessing {
+  10 = WapplerSystems\WsT3bootstrap\Frontend\DataProcessing\FilesProcessor
+  10 {
+    dataProcessing {
+      recordTable = sys_file_metadata
+      10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+      10 {
+        references.fieldName = poster
+        as = poster
+      }
+    }
+  }
+  19 = WapplerSystems\WsT3bootstrap\Frontend\DataProcessing\GridLayoutProcessor
+}
+
+tt_content.image.dataProcessing {
+  19 = WapplerSystems\WsT3bootstrap\Frontend\DataProcessing\GridLayoutProcessor
+}

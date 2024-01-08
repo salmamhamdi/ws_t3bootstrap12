@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Content"/>
+
+<f:section name="Configuration">
+    <flux:form id="buttonlink"
+               options="{group: 'Bootstrap',icon:'content-button'}">
+
+        <flux:field name="target" label="LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.buttonlink.fields.target" type="input" config="{renderType:'inputLink'}"/>
+
+        <flux:field.input name="text"/>
+        <flux:field.select name="titleType" items="title,tooltip,popover" default="title" size="1" maxItems="1"/>
+        <flux:field.select name="tooltipPosition" items="top,right,bottom,left" default="top" size="1" maxItems="1"/>
+        <flux:field.checkbox name="outline"/>
+        <flux:field.input name="title"/>
+        <flux:field type="input" name="icon" config="{renderType:'selectIcon'}"/>
+        <flux:field.select name="size" items="default,xs,sm,lg" size="1" maxItems="1"/>
+        <flux:field.checkbox name="block"/>
+        <flux:field.select name="class" items="primary,success,warning,danger,info,secondary,light,dark" size="1" maxItems="1"/>
+        <flux:field.text name="popoverContent" rows="3"/>
+        <flux:field.input name="additionalClassNames"/>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    Button: {text}, size: {size}, class: {class}
+</f:section>
+
+<f:section name="Main">
+
+    <f:render partial="Rendering/ButtonLink" section="Main" arguments="{_all}"/>
+
+</f:section>
+
+</html>

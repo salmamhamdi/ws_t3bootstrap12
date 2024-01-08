@@ -1,0 +1,78 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:render partial="Assets" optional="true" section="Image" arguments="{_all}" />
+<figure class="image{f:if(condition:'{file.properties.extended_design} != \'\' && {file.properties.extended_design} != \'_\'',then:' effect effect-{file.properties.extended_design}')}">
+    <div class="{data.flexbox.classes}">
+        <f:if condition="{file.link}">
+            <f:then>
+                <f:link.typolink parameter="{file.link}" title="{file.title}">
+                    <f:render partial="Media/Rendering/Image" arguments="{file: file, dimensions: dimensions, data: data, settings: settings, iterator:iterator}"/>
+                    <f:if condition="{file.properties.text_visible} || {file.properties.text_hover}">
+                        <figcaption class="effect">
+                            <div class="overlay-effect">
+                                <div class="overlay-text">
+                                    <f:format.html>{file.properties.text_visible}</f:format.html>
+                                </div>
+                                <f:if condition="{file.properties.text_hover}">
+                                    <div class="overlay-hover-text">
+                                        <f:format.html>{file.properties.text_hover}</f:format.html>
+                                    </div>
+                                </f:if>
+                            </div>
+                        </figcaption>
+                    </f:if>
+                </f:link.typolink>
+            </f:then>
+            <f:else>
+                <f:if condition="{data.image_zoom}">
+                    <f:then>
+                        <ws:link.clickEnlarge media="{file}" configuration="{settings.media.popup}">
+                            <f:render partial="Media/Rendering/Image" arguments="{file: file, dimensions: dimensions, data: data, settings: settings, iterator:iterator}"/>
+                            <f:if condition="{file.properties.text_visible} || {file.properties.text_hover}">
+                                <figcaption class="effect">
+                                    <div class="overlay-effect">
+                                        <div class="overlay-text">
+                                            <f:format.html>{file.properties.text_visible}</f:format.html>
+                                        </div>
+                                        <f:if condition="{file.properties.text_hover}">
+                                            <div class="overlay-hover-text">
+                                                <f:format.html>{file.properties.text_hover}</f:format.html>
+                                            </div>
+                                        </f:if>
+                                    </div>
+                                </figcaption>
+                            </f:if>
+                        </ws:link.clickEnlarge>
+                    </f:then>
+                    <f:else>
+                        <f:render partial="Media/Rendering/Image" arguments="{file: file, dimensions: dimensions, data: data, settings: settings, iterator:iterator}"/>
+                        <f:if condition="{file.properties.text_visible} || {file.properties.text_hover}">
+                            <figcaption class="effect">
+                                <div class="overlay-effect">
+                                    <div class="overlay-text">
+                                        <f:format.html>{file.properties.text_visible}</f:format.html>
+                                    </div>
+                                    <f:if condition="{file.properties.text_hover}">
+                                        <div class="overlay-hover-text">
+                                            <f:format.html>{file.properties.text_hover}</f:format.html>
+                                        </div>
+                                    </f:if>
+                                </div>
+                            </figcaption>
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+    </div>
+
+    <f:if condition="{file.description} || {file.properties.copyright}">
+        <figcaption class="image-caption {data.flexbox.captionJustify}">
+            <span class="description">{file.description}</span>
+            <f:if condition="{file.properties.copyright}"><span class="copyright">&copy; {file.properties.copyright}</span></f:if>
+        </figcaption>
+    </f:if>
+</figure>
+</html>

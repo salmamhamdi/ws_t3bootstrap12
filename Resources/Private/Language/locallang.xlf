@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-02-07T11:13:04Z"
+		  product-name="ws_t3bootstrap">
+		<header/>
+		<body>
+
+			<trans-unit id="flux.newContentWizard.Bootstrap">
+				<source>Bootstrap</source>
+			</trans-unit>
+
+
+			<!-- Link titles -->
+			<trans-unit id="more_link_titleText">
+				<source>Read More</source>
+			</trans-unit>
+			<trans-unit id="more_link_altText">
+				<source>Read More</source>
+			</trans-unit>
+			<trans-unit id="next_link_titleText">
+				<source>Read More</source>
+			</trans-unit>
+			<trans-unit id="next_link_altText">
+				<source>Read More</source>
+			</trans-unit>
+
+
+			<!-- Flux Accordion -->
+			<trans-unit id="flux.accordion">
+				<source>Accordion with content elements</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.description">
+				<source>Places child content elements in tabs</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.objects.panel">
+				<source>Panel</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.objects.panel.active">
+				<source>Panel is active?</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.objects.panel.class">
+				<source>CSS class</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.objects.panel.title">
+				<source>Panel header/title</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.sections.panels">
+				<source>Panels</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.sheets.panels">
+				<source>Panels</source>
+			</trans-unit>
+
+
+			<trans-unit id="flux.panel">
+				<source>Panel</source>
+			</trans-unit>
+			<trans-unit id="flux.panel.columns.content">
+				<source>Panel</source>
+			</trans-unit>
+			<trans-unit id="flux.panel.description">
+				<source>Panel box with headline.</source>
+			</trans-unit>
+			<trans-unit id="flux.panel.fields.class">
+				<source>Panel box class</source>
+			</trans-unit>
+			<trans-unit id="flux.panel.fields.header">
+				<source>Panel header</source>
+			</trans-unit>
+
+
+			<trans-unit id="flux.alert">
+				<source>Alert</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.columns.content">
+				<source>Alert</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.areas.content">
+				<source>Child content</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.description">
+				<source>Styled alert box, inline as page content. Optionally with dismiss/close icon.</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.fields.class">
+				<source>Alert box class</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.fields.closeLinkText">
+				<source>Close link text (for example: a single x or &amp;times;)</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.fields.header">
+				<source>Alert header</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.fields.isBlock">
+				<source>Add additional padding</source>
+			</trans-unit>
+
+			<trans-unit id="flux.buttongroup">
+				<source>Button Group</source>
+			</trans-unit>
+			<trans-unit id="flux.buttongroup.columns.content">
+				<source>Button Group</source>
+			</trans-unit>
+			<trans-unit id="flux.buttongroup.areas.content">
+				<source>Buttons</source>
+			</trans-unit>
+			<trans-unit id="flux.buttongroup.description">
+				<source>Renders Bootstrap button elements added as child content elements in a botton grouping wrapper
+					which closely aligns the buttons/links.
+				</source>
+			</trans-unit>
+
+			<trans-unit id="flux.buttonlink">
+				<source>Button Link</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.description">
+				<source>Default Bootstrap button-styled link to a page, file or custom URL.</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.additionalClassNames">
+				<source>Additional class names for LinkButton element</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.block">
+				<source>Display button as block element (100% width)</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.class">
+				<source>LinkButton style type</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.iconClass">
+				<source>Optional icon class name, example 'envelope' or 'exclamation-sign'</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.iconPlacement">
+				<source>Icon placement - left or right</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.size">
+				<source>LinkButton size</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.target">
+				<source>Link target</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.text">
+				<source>Link text</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.title">
+				<source>Optional title, appears as tooltip if tooltip is enabled</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.tooltip">
+				<source>Display title as tooltip</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.outline">
+				<source>Use outline style</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.buttonAlignment">
+				<source>Button alignment (does not work in Button Group elements)</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.tooltipPosition">
+				<source>Position of the tooltip or popover</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.titleType">
+				<source>The way the title is displayed</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.popoverContent">
+				<source>Content of the popover</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.modal">
+				<source>Modal dialog</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.modal.content">
+				<source>Content elements to be displayed</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.modal.title">
+				<source>Modal dialog title</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.popover">
+				<source>Popover dialog</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.popover.content">
+				<source>Popover content</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.popover.title">
+				<source>Popover title</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.sections.addons">
+				<source>Addons</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.sheets.addons">
+				<source>Addons</source>
+			</trans-unit>
+
+			<!-- Flux Carousel -->
+			<trans-unit id="flux.carousel">
+				<source>Carousel (deprecated)</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.description">
+				<source>Please use a extension like ws_slider with a lot of nice options.</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.id">
+				<source>DOM element ID (override not necessary but possible)</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.interval">
+				<source>Interval between image changes, in miliseconds (default: 5000)</source>
+			</trans-unit>
+
+			<trans-unit id="flux.carousel.fields.settings.carousel.controls">
+				<source>Enable controls</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.enableIndicators">
+				<source>Enable indicators</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.void"/>
+			<trans-unit id="flux.carousel.objects.content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.content.id">
+				<source>Content Area ID</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.image.file">
+				<source>Image file</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.text.size">
+				<source>Header size</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.text.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.text.title">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.sections.elements">
+				<source>Elements</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.sheets.elements">
+				<source>Elements</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.sheets.styles">
+				<source>Styles</source>
+			</trans-unit>
+
+			<trans-unit id="flux.herounit">
+				<source>Hero Unit</source>
+			</trans-unit>
+			<trans-unit id="flux.herounit.areas.content">
+				<source>Hero unit content</source>
+			</trans-unit>
+			<trans-unit id="flux.herounit.description">
+				<source>A very large header-type element into which you can insert other content elements.</source>
+			</trans-unit>
+			<trans-unit id="flux.herounit.columns.content">
+				<source>Hero unit</source>
+			</trans-unit>
+
+			<trans-unit id="flux.navigationlist">
+				<source>Navigation List</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.description">
+				<source>Configurable navigation list of links to various resources.</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.fields.addWell">
+				<source>Add well wrapper</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.fields.class">
+				<source>Additional class names for wrapper element</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.fields.zeroPadding">
+				<source>Do not pad the wrapper</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.divider">
+				<source>Divider</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.divider.class">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.header">
+				<source>List Header</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.header.class">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.header.text">
+				<source>Header text</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item">
+				<source>List Item</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item.class">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item.icon">
+				<source>Optional icon (16x16)</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item.target">
+				<source>Target</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item.text">
+				<source>Item label text</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item.tooltip">
+				<source>Optional tooltip text</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.sections.items">
+				<source>Items</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.sheets.display">
+				<source>Display</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.sheets.items">
+				<source>Items</source>
+			</trans-unit>
+
+			<trans-unit id="flux.pageheader">
+				<source>Page Header</source>
+			</trans-unit>
+			<trans-unit id="flux.pageheader.description">
+				<source>An underlined page header element with optional small caption.</source>
+			</trans-unit>
+			<trans-unit id="flux.pageheader.fields.header">
+				<source>Large text</source>
+			</trans-unit>
+			<trans-unit id="flux.pageheader.fields.subheader">
+				<source>Smaller text next to large text</source>
+			</trans-unit>
+
+			<trans-unit id="flux.row">
+				<source>Column Row</source>
+			</trans-unit>
+			<trans-unit id="flux.row.description">
+				<source>Adds a wrapper element that lets you define columns of varying widths</source>
+			</trans-unit>
+			<trans-unit id="flux.row.fields.basic">
+				<source>Basic (non-responsive) row, uses CSS class 'row' instead of 'row-fluid'</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column">
+				<source>Column</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column.addWell">
+				<source>Add 'Well' inside cell</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column.additionalClass">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column.class">
+				<source>Class</source>
+			</trans-unit>
+			<trans-unit id="flux.row.sections.columns">
+				<source>Columns</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column.class-xs">
+				<source>XS, Smartphones</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column.class-sm">
+				<source>SM, Smartphone</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column.class-md">
+				<source>MD, Tablet</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column.class-lg">
+				<source>LG, Desktop</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column.class-xl">
+				<source>XL, Desktop</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column.class-xxl">
+				<source>XXL, Desktop</source>
+			</trans-unit>
+			<trans-unit id="flux.row.columns.column">
+				<source>Column</source>
+			</trans-unit>
+			<trans-unit id="flux.row.fields.alignment">
+				<source>Alignment</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column.alignment">
+				<source>Alignment</source>
+			</trans-unit>
+			<trans-unit id="flux.row.fields.adjustment">
+				<source>Adjustment</source>
+			</trans-unit>
+			<trans-unit id="flux.row.fields.display">
+				<source>Display type of columns</source>
+			</trans-unit>
+
+
+			<trans-unit id="flux.example">
+				<source>"Example" Wrapper</source>
+			</trans-unit>
+			<trans-unit id="flux.example.areas.content">
+				<source>"Example" Wrapper</source>
+			</trans-unit>
+			<trans-unit id="flux.example.columns.column">
+				<source>"Example" Wrapper</source>
+			</trans-unit>
+			<trans-unit id="flux.example.columns.content">
+				<source>"Example" Wrapper</source>
+			</trans-unit>
+
+			<trans-unit id="flux.thumbnail">
+				<source>Thumbnail</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnail.description">
+				<source>Element with image and content below</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnail.areas.content">
+				<source>Thumbnail</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnail.fields.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnail.columns.content">
+				<source>Thumbnail</source>
+			</trans-unit>
+
+
+			<trans-unit id="flux.card">
+				<source>Card (deprecated)</source>
+			</trans-unit>
+			<trans-unit id="flux.card.description">
+				<source>Element with image and content below</source>
+			</trans-unit>
+			<trans-unit id="flux.card.areas.content">
+				<source>Card</source>
+			</trans-unit>
+			<trans-unit id="flux.card.fields.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="flux.card.columns.content">
+				<source>Card</source>
+			</trans-unit>
+			<trans-unit id="flux.card.fields.iconClass">
+				<source>Optional icon class name, example 'envelope' or 'exclamation-sign'</source>
+			</trans-unit>
+			<trans-unit id="flux.card.fields.additionalClass">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+
+
+			<trans-unit id="flux.cards">
+				<source>Cards</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.description">
+				<source>A collection of card elements</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.sheets.general">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.layout">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.layout.group">
+				<source>group</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.layout.deck">
+				<source>deck (deprecated, use grid cards)</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.layout.grid-cards">
+				<source>grid cards</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.layout.card-columns">
+				<source>card columns</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.sheets.gridOptions">
+				<source>Grid Options</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.gridXs">
+				<source>Standard (Smartphones)</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.gridSm">
+				<source>Small devices (Smartphones)</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.gridMd">
+				<source>Medium devices (tablet, email)</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.gridLg">
+				<source>Large devices (desktop)</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.gridXl">
+				<source>Very large devices (desktop)</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.gridXxl">
+				<source>Largest devices (desktop)</source>
+			</trans-unit>
+
+			<trans-unit id="flux.cards.fields.griditems.skip">
+				<source>skip</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.griditems.1">
+				<source>1 per row</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.griditems.2">
+				<source>2 per row</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.griditems.3">
+				<source>3 per row</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.griditems.4">
+				<source>4 per row</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.griditems.6">
+				<source>6 per row</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.griditems.12">
+				<source>12 per row</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.griditems.0">
+				<source>hidden</source>
+			</trans-unit>
+
+			<trans-unit id="flux.cards.fields.gutter">
+				<source>gutter</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.gutteritems.0">
+				<source>spacing amount 0</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.gutteritems.1">
+				<source>spacing amount 1</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.gutteritems.2">
+				<source>spacing amount 2</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.gutteritems.3">
+				<source>spacing amount 3</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.gutteritems.4">
+				<source>spacing amount 4</source>
+			</trans-unit>
+			<trans-unit id="flux.cards.fields.gutteritems.5">
+				<source>spacing amount 5</source>
+			</trans-unit>
+
+			<trans-unit id="flux.media">
+				<source>Media (deprecated)</source>
+			</trans-unit>
+			<trans-unit id="flux.media.description">
+				<source>Element with image left and content right</source>
+			</trans-unit>
+			<trans-unit id="flux.media.areas.content">
+				<source>Media</source>
+			</trans-unit>
+			<trans-unit id="flux.media.fields.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="flux.media.fields.icon">
+				<source>Icon class</source>
+			</trans-unit>
+			<trans-unit id="flux.media.columns.content">
+				<source>Media</source>
+			</trans-unit>
+
+
+			<trans-unit id="flux.tabs">
+				<source>Tabs/pills with content elements</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.description">
+				<source>Places child content elements in tabs.</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.fields.mode">
+				<source>Display mode</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.fields.position">
+				<source>Positioning</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.fields.stackable">
+				<source>Make stackable tabs/pills</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.fields.tabDirection">
+				<source>Tab direction</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.objects.tab">
+				<source>Tab</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.objects.tab.active">
+				<source>Active?</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.objects.tab.class">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.objects.tab.fade">
+				<source>Enable fading effect</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.objects.tab.title">
+				<source>Tab title</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.sections.tabs">
+				<source>Tabs</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.sheets.display">
+				<source>Display</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.sheets.tabs">
+				<source>Tabs</source>
+			</trans-unit>
+
+			<trans-unit id="flux.thumbnails">
+				<source>Thumbnail Grid</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.description">
+				<source>Responsive grid of highly configurable thumbnails configurable with lightbox-style opening of content</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.fields.ratio">
+				<source>Ratio of images, for example 0.75 (very grid friendly), 16/9 (widescreen) or 1.32 (nice golden ratio portrait)</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.fields.width">
+				<source>Maxium allowed width to distribute across 12 cells. The Bootstrap default is 960</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.content.label">
+				<source>Content area label</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.content.message"/>
+			<trans-unit id="flux.thumbnails.objects.content.name">
+				<source>Content area name</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.addWell">
+				<source>Add well on thumbnail wrap</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.caption">
+				<source>Caption text (optional)</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.file">
+				<source>File</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.header">
+				<source>Caption header (optional)</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.scaling">
+				<source>Scaling mode</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.title">
+				<source>Hover title / alt text for image</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.sections.thumbnails">
+				<source>Thumbnails</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.sheets.thumbnails">
+				<source>Thumbnails</source>
+			</trans-unit>
+
+
+			<trans-unit id="flux.well">
+				<source>Content Well (deprecated)</source>
+			</trans-unit>
+			<trans-unit id="flux.well.areas.content">
+				<source>Child content</source>
+			</trans-unit>
+			<trans-unit id="flux.well.description">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="flux.well.columns.content">
+				<source>"Well" wrapper</source>
+			</trans-unit>
+
+			<!-- jQuery Tabs -->
+			<trans-unit id="flux.jquerytabs">
+				<source>Tabs with content elements</source>
+			</trans-unit>
+			<trans-unit id="flux.jquerytabs.description">
+				<source>Places child content elements in tabs.</source>
+			</trans-unit>
+			<trans-unit id="flux.jquerytabs.fields.mode">
+				<source>Display mode</source>
+			</trans-unit>
+			<trans-unit id="flux.jquerytabs.fields.position">
+				<source>Positioning</source>
+			</trans-unit>
+			<trans-unit id="flux.jquerytabs.fields.stackable">
+				<source>Make stackable tabs/pills</source>
+			</trans-unit>
+			<trans-unit id="flux.jquerytabs.objects.tab">
+				<source>Tab</source>
+			</trans-unit>
+			<trans-unit id="flux.jquerytabs.objects.tab.active">
+				<source>Active?</source>
+			</trans-unit>
+			<trans-unit id="flux.jquerytabs.objects.tab.class">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+			<trans-unit id="flux.jquerytabs.objects.tab.fade">
+				<source>Enable fading effect</source>
+			</trans-unit>
+			<trans-unit id="flux.jquerytabs.objects.tab.title">
+				<source>Tab title</source>
+			</trans-unit>
+			<trans-unit id="flux.jquerytabs.sections.tabs">
+				<source>Tabs</source>
+			</trans-unit>
+			<trans-unit id="flux.jquerytabs.sheets.display">
+				<source>Display</source>
+			</trans-unit>
+			<trans-unit id="flux.jquerytabs.sheets.tabs">
+				<source>Tabs</source>
+			</trans-unit>
+
+
+			<trans-unit id="other">
+				<source>Other</source>
+			</trans-unit>
+
+
+			<!-- Flexslider -->
+			<trans-unit id="flux.flexslider">
+				<source>Flexslider</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.description">
+				<source>Content elements, images or simple texts (each type supporting captions) in a flexslider matrix with JS based slide change.</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.id">
+				<source>DOM element ID (override not necessary but possible)</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.innerStyles">
+				<source>Optional CSS rule for the slider area body</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.interval">
+				<source>Interval between image changes, in miliseconds (default: 5000)</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.labelNext">
+				<source>Label: next (clear to remove link)</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.labelPrev">
+				<source>Label: previous (clear to remove link)</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.navigationStyles">
+				<source>Optional CSS rule for the navigation dots</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.quickselect">
+				<source>Display circle icons for direct selection of slides, default top right corner</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.quickselectDotStyles">
+				<source>Optional CSS rule for the quick slide selector dots</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.quickselectStyles">
+				<source>Optional CSS rule for the quick slide selector dots container</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.width">
+				<source>Image width, supports TS IMAGE widths, fx 250c to set width 250 with cropping</source>
+			</trans-unit>
+
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.controlNav">
+				<source>Control navigation on</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.directionNav">
+				<source>Direction navigation on</source>
+			</trans-unit>
+
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.specialproperties">
+				<source>special properties</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.controlsContainer">
+				<source>controlsContainer jQuery Object/Selector</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.manualControls">
+				<source>manualControls jQuery Object/Selector</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.sync">
+				<source>Sync selector: Mirror the actions performed on this slider with another slider</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.fields.settings.flexslider.asNavFor">
+				<source>asNavFor selector</source>
+			</trans-unit>
+
+			<trans-unit id="flux.flexslider.objects.video.playerid">
+				<source>Player ID</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.objects.video.videoid">
+				<source>Video ID</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.objects.video.width">
+				<source>Width of iframe</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.objects.video.height">
+				<source>Height of iframe</source>
+			</trans-unit>
+
+			<trans-unit id="flux.flexslider.fields.void"/>
+			<trans-unit id="flux.flexslider.objects.content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.objects.content.id">
+				<source>Content Area ID</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.objects.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.objects.video">
+				<source>Video</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.objects.image.file">
+				<source>Image file</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.objects.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.objects.text.size">
+				<source>Header size</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.objects.text.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.objects.text.title">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.sections.elements">
+				<source>Elements</source>
+			</trans-unit>
+
+			<trans-unit id="flux.flexslider.sheets.elements">
+				<source>Elements</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.sheets.configuration">
+				<source>Configuration</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.sheets.primarycontrols">
+				<source>Primary controls</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.sheets.secondarynavigation">
+				<source>Secondary navigation</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.sheets.specialproperties">
+				<source>Special properties</source>
+			</trans-unit>
+			<trans-unit id="flux.flexslider.sheets.carousel">
+				<source>Carousel</source>
+			</trans-unit>
+
+			<trans-unit id="flux.pagecontent">
+				<source>Content of another page</source>
+			</trans-unit>
+			<trans-unit id="flux.pagecontent.description">
+				<source>Views content of another page</source>
+			</trans-unit>
+
+			<trans-unit id="elements">
+				<source>Elements</source>
+			</trans-unit>
+
+
+			<trans-unit id="flux.container.columns.content">
+				<source>Container</source>
+			</trans-unit>
+			<trans-unit id="flux.container.fields.type">
+				<source>Container type</source>
+			</trans-unit>
+			<trans-unit id="flux.container.fields.background">
+				<source>Container background</source>
+			</trans-unit>
+
+
+			<!-- GoogleMap -->
+			<trans-unit id="flux.googlemap">
+				<source>Google Map</source>
+			</trans-unit>
+
+
+			<trans-unit id="flux.image.fields.settings.openInLightbox">
+				<source>Open image in lightbox</source>
+			</trans-unit>
+			<trans-unit id="flux.image.fields.settings.lightboxGroup">
+				<source>Lightbox group</source>
+			</trans-unit>
+
+			<trans-unit id="html_tag">
+				<source>HTML tag</source>
+			</trans-unit>
+
+
+			<trans-unit id="header_groups">
+				<source>Groups</source>
+			</trans-unit>
+			<trans-unit id="header_groups.1">
+				<source>Group 1</source>
+			</trans-unit>
+			<trans-unit id="header_groups.2">
+				<source>Group 2</source>
+			</trans-unit>
+
+
+			<trans-unit id="dateFormat">
+				<source>%m/%d/%Y</source>
+			</trans-unit>
+
+
+			<trans-unit id="optin_policy_link" resname="optin_policy_link">
+				<source>Privacy policy link</source>
+			</trans-unit>
+			<trans-unit id="optin_policy_link_formlabel" resname="optin_policy_link_formlabel">
+				<source>Privacy policy link</source>
+			</trans-unit>
+			<trans-unit id="optin_text_youtube" resname="optin_text_youtube">
+				<source><![CDATA[If you choose "Show Video", you agree with the <a href="%s" class="opt-in-privacy-policy-link" target="_blank">privacy policy of Google</a>.]]></source>
+			</trans-unit>
+			<trans-unit id="optin_button_label_youtube" resname="optin_button_label_youtube">
+				<source>Show Video</source>
+			</trans-unit>
+			<trans-unit id="optin_text_vimeo" resname="optin_text_vimeo">
+				<source><![CDATA[If you choose "Show Video", you agree with the <a href="%s" class="opt-in-privacy-policy-link" target="_blank">privacy policy of Vimeo</a>.]]></source>
+			</trans-unit>
+			<trans-unit id="optin_button_label_vimeo" resname="optin_button_label_vimeo">
+				<source>Show Video</source>
+			</trans-unit>
+
+
+			<trans-unit id="error_message">
+				<source>An error occurred!</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

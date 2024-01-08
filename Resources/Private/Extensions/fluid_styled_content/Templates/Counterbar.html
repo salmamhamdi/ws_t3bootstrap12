@@ -1,0 +1,37 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+<f:section name="Main">
+
+    <f:render partial="Assets" section="Counterbar" arguments="{_all}" optional="true" />
+
+    <f:spaceless>
+
+        <f:if condition="{records}">
+
+            <div class="row">
+
+                <f:for each="{records}" as="counter" iteration="i">
+                    <ws:column sm="12" md="12" lg="{ws:bootstrap.columnConverter(columns:data.pi_flexform_array.columns)}">
+                        <div class="counter-wrapper">
+                            <f:if condition="{counter.icon.available}">
+                                <div class="counter-icon-wrapper d-flex justify-content-center align-items-center mx-auto mt-4">
+                                        <span class="icon">{counter.icon.svg -> f:format.raw()}</span>
+                                </div>
+                            </f:if>
+                            <div class="counter-number">
+                                <span>{counter.data.count_number}</span>
+                            </div>
+                            <div class="counter-text mb-4">
+                                <f:format.html>{counter.data.header}</f:format.html>
+                            </div>
+                        </div>
+                    </ws:column>
+                </f:for>
+            </div>
+        </f:if>
+
+    </f:spaceless>
+</f:section>
+</html>

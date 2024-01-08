@@ -1,0 +1,278 @@
+TCAdefaults.fe_users.tx_extbase_type = Tx_Extbase_Domain_Model_FrontendUser
+TCAdefaults.fe_groups.tx_extbase_type = Tx_Extbase_Domain_Model_FrontendUserGroup
+
+mod.wizards.newContentElement.wizardItems {
+  common.elements {
+    textmedia {
+      tt_content_defValues {
+        imageorient = 2
+      }
+    }
+
+    image {
+      tt_content_defValues {
+        imageorient = 2
+      }
+    }
+
+    textpic {
+      tt_content_defValues {
+        imageorient = 2
+      }
+    }
+
+    fe_user {
+
+    }
+  }
+}
+
+
+mod.wizards.newContentElement.wizardItems.bootstrap {
+  header = Bootstrap
+  after = common
+}
+
+mod.wizards.newContentElement.wizardItems.other {
+  header = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:other.header
+  after = bootstrap
+}
+
+
+TCEFORM.tt_content {
+
+
+  header_layout.altLabels.0 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:header_layout.altLabels.0
+  header_layout.altLabels.1 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:header_layout.altLabels.1
+  header_layout.altLabels.2 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:header_layout.altLabels.2
+  header_layout.altLabels.3 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:header_layout.altLabels.3
+  header_layout.altLabels.4 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:header_layout.altLabels.4
+  header_layout.altLabels.5 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:header_layout.altLabels.5
+
+
+  imageorient.disabled = 0
+  imageorient.addItems {
+    27 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:image_orient.none
+    28 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:image_orient.left
+    29 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:image_orient.center
+    30 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:image_orient.right
+  }
+
+  imageorient.removeItems = 0,1,2,8,9,10,17,18,25,26,--div--
+  imageorient.label = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:image_orient
+
+  # remove image dimension settings. Not necessary for responsive images
+  imagewidth.disabled = true
+  imageheight.disabled = true
+  imagecols.disabled = true
+
+
+  frame_class.altLabels.ruler-before = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:frame_class.altLabels.ruler-before
+  frame_class.altLabels.ruler-after = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:frame_class.altLabels.ruler-after
+  frame_class.altLabels.indent = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:frame_class.altLabels.indent
+  frame_class.altLabels.indent-left = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:frame_class.altLabels.indent-left
+  frame_class.altLabels.indent-right = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:frame_class.altLabels.indent-right
+
+
+  filelink_sorting.addItems {
+    creation_date = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:filelink_sorting.creation_date
+    modification_date = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:filelink_sorting.modification_date
+  }
+
+  frame_class.addItems {
+    g-max-770 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:frame_class.g-max-770
+    g-max-770.group = design
+    g-min-height-100vh = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:frame_class.g-min-height-100vh
+    g-min-height-100vh.group = design
+    g-min-height-100p = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:frame_class.g-min-height-100p
+    g-min-height-100p.group = design
+    g-bg-black-opacity-0_5--after = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:frame_class.g-bg-black-opacity-0_5--after
+    g-bg-black-opacity-0_5--after.group = design
+    g-flex-centered = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:frame_class.g-flex-centered
+    g-flex-centered.group = design
+    bg-min-height = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:frame_class.bg-min-height
+    bg-min-height.group = design
+    frame-no-side-padding = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:frame_class.no-side-padding
+    frame-no-side-padding.group = design
+  }
+
+  frame_class.removeItems = none
+  frame_class.types.card.addItems {
+    text-left = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:frame_class.types.card.text-left
+    text-center = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:frame_class.types.card.text-center
+    text-right = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:frame_class.types.card.text-right
+  }
+
+  header_layout.types.card {
+    altLabels.0 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:header_layout.types.card.altLabels.0
+  }
+
+  effects.types.card.addItems {
+    flip = Flip
+    hover = Hover
+  }
+
+  # does not work:
+  effects.types.card.onChange = reload
+  effects.types.card.config.maxitems = 1
+  effects.types.card.config.size = 1
+  effects.types.card.multiple = false
+
+
+  effects.addItems {
+    parallaxBg = Parallax
+  }
+
+  image_classes.addItems {
+    img-rounded = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:image_classes.img-rounded
+    img-circle = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/config_tsconfig.xlf:image_classes.img-circle
+  }
+
+  form_layout.addItems {
+    horizontal = Horizontal
+    floating-label = Floating Labels
+  }
+
+  pi_flexform.default.general.layout.addItems {
+    group = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.layout.group
+    deck = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.layout.deck
+    grid-cards = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.layout.grid-cards
+    card-columns = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.layout.card-columns
+  }
+
+  pi_flexform.default.gridOptions.gridXs.addItems {
+    false = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.skip
+    1 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.1
+    2 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.2
+    3 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.3
+    4 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.4
+    6 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.6
+    12 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.12
+    0 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.0
+  }
+
+  pi_flexform.default.gridOptions.gridSm.addItems {
+    false = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.skip
+    1 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.1
+    2 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.2
+    3 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.3
+    4 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.4
+    6 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.6
+    12 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.12
+    0 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.0
+  }
+  pi_flexform.default.gridOptions.gridMd.addItems {
+    false = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.skip
+    1 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.1
+    2 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.2
+    3 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.3
+    4 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.4
+    6 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.6
+    12 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.12
+    0 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.0
+  }
+  pi_flexform.default.gridOptions.gridLg.addItems {
+    false = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.skip
+    1 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.1
+    2 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.2
+    3 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.3
+    4 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.4
+    6 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.6
+    12 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.12
+    0 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.0
+  }
+  pi_flexform.default.gridOptions.gridXl.addItems {
+    false = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.skip
+    1 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.1
+    2 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.2
+    3 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.3
+    4 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.4
+    6 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.6
+    12 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.12
+    0 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.0
+  }
+  pi_flexform.default.gridOptions.gridXxl.addItems {
+    false = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.skip
+    1 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.1
+    2 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.2
+    3 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.3
+    4 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.4
+    6 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.6
+    12 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.12
+    0 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.griditems.0
+  }
+
+  pi_flexform.default.gridOptions.gutter.addItems {
+    g-4 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.gutteritems.4
+    g-0 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.gutteritems.0
+    g-1 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.gutteritems.1
+    g-2 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.gutteritems.2
+    g-3 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.gutteritems.3
+    g-5 = LLL:EXT:ws_t3bootstrap/Resources/Private/Language/locallang.xlf:flux.cards.fields.gutteritems.5
+  }
+
+
+#  assets.config.overrideChildTca.columns.crop.config.cropVariants {
+#    xs {
+#      title = Sehr schmale Smartphones
+#      allowedAspectRatios {
+#        NaN {
+#          title = Frei
+#          value = NaN
+#        }
+#      }
+#    }
+#
+#    sm {
+#      title = Smartphones
+#      allowedAspectRatios {
+#        NaN {
+#          title = Frei
+#          value = NaN
+#        }
+#      }
+#    }
+#
+#    md {
+#      title = Tablets
+#      allowedAspectRatios {
+#        NaN {
+#          title = Frei
+#          value = NaN
+#        }
+#      }
+#    }
+#
+#    lg {
+#      title = Desktop
+#      allowedAspectRatios {
+#        NaN {
+#          title = Frei
+#          value = NaN
+#        }
+#      }
+#    }
+#
+#    xl {
+#      title = Sehr großer Desktop
+#      allowedAspectRatios {
+#        NaN {
+#          title = Frei
+#          value = NaN
+#        }
+#      }
+#    }
+#
+#    full {
+#      title = Komplette Breite
+#      allowedAspectRatios {
+#        NaN {
+#          title = Frei
+#          value = NaN
+#        }
+#      }
+#    }
+#  }
+
+
+}

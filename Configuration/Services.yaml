@@ -1,0 +1,36 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  WapplerSystems\WsT3bootstrap\:
+    resource: '../Classes/*'
+
+  WapplerSystems\WsT3bootstrap\EventListener\AddRequireJsModule:
+    tags:
+      - name: event.listener
+        event: TYPO3\CMS\Backend\Controller\Event\BeforeFormEnginePageInitializedEvent
+
+  WapplerSystems\WsT3bootstrap\Frontend\Middleware\HtmlMinifier:
+    public: true
+
+  WapplerSystems\WsT3bootstrap\Frontend\ContentObject\Exception\ProductionExceptionHandler:
+    public: true
+    shared: false
+
+  WapplerSystems\WsT3bootstrap\Page\PageRenderer:
+    arguments:
+      $assetsCache: '@cache.assets'
+
+  WapplerSystems\WsT3bootstrap\Frontend\Menu\DataProcessing\FlexibleMenuProcessor:
+    public: true
+    shared: false
+    tags:
+      - { name: 'data.processor', identifier: 'flexible-menu' }
+
+  WapplerSystems\WsT3bootstrap\Frontend\Menu\DataProcessing\CurrentMenuLevelProcessor:
+    public: true
+    shared: false
+    tags:
+      - { name: 'data.processor', identifier: 'current-menu-level' }

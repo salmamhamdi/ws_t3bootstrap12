@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://t3bootstrap.de" viewBox="0 0 32 32" width="32" height="32" style="isolation:isolate">
+    <rect y="0" width="32" height="32" style="fill: rgba(255, 255, 255);" bx:origin="0.5 0.5"/>
+    <rect x="1.5" y="8.747" width="28.824" height="13.158" style="stroke: rgb(0, 0, 0); fill-rule: nonzero; paint-order: fill; fill: rgb(255, 255, 255);"/>
+    <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" d="M 11.16 8.747 L 11.16 21.823"/>
+    <path style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" d="M 20.673 8.747 L 20.673 21.823"/>
+    <text style="fill:#000;font-family:&quot;Open Sans&quot;;font-weight:400;font-size:1.2px;font-style:normal;" x="4.143" y="13.476" transform="matrix(7.221465, 0, 0, 7.341804, -26.104479, -80.585541)">0</text>
+    <text style="fill:#000;font-family:&quot;Open Sans&quot;;font-weight:400;font-size:1.2px;font-style:normal;" x="4.143" y="13.476" transform="matrix(7.221465, 0, 0, 7.341804, -16.288738, -80.387611)">0</text>
+    <text style="fill:#000;font-family:&quot;Open Sans&quot;;font-weight:400;font-size:1.2px;font-style:normal;" x="4.143" y="13.476" transform="matrix(7.221465, 0, 0, 7.341804, -7.050251, -75.713264)">5</text>
+    <text style="fill:#000;font-family:&quot;Open Sans&quot;;font-weight:400;font-size:1.2px;font-style:normal;" x="4.143" y="13.476" transform="matrix(7.221465, 0, 0, 7.341804, -7.009132, -84.80043)">4</text>
+    <rect x="0.854" y="2.525" width="30.099" height="5.757" style="fill: rgb(255, 255, 255);"/>
+    <rect x="0.566" y="22.357" width="30.099" height="5.757" style="fill: rgb(255, 255, 255);"/>
+</svg>

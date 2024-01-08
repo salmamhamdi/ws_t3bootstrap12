@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Content"/>
+
+<f:section name="Configuration">
+    <flux:form id="alert" options="{group: 'Bootstrap',icon:'content-alert'}">
+        <flux:form.option.static value="1"/>
+        <flux:field.input name="header"/>
+        <flux:field.input name="closeLinkText"/>
+        <flux:field.select name="class" items="primary,secondary,info,success,warning,danger,light,dark" default="primary"/>
+        <flux:field.checkbox name="isBlock"/>
+        <flux:grid>
+            <flux:grid.row>
+                <flux:grid.column colPos="0" name="content" label="Inhalt"/>
+            </flux:grid.row>
+        </flux:grid>
+    </flux:form>
+</f:section>
+
+<f:section name="Main">
+
+    <f:render partial="Rendering/Alert" section="Main" arguments="{_all}"/>
+
+</f:section>
+
+</html>

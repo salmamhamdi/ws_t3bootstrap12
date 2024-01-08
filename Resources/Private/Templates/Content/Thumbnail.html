@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Content"/>
+
+<f:section name="Configuration">
+    <flux:form id="thumbnail" options="{group: 'Bootstrap',icon:'content-wst3bootstrap-default'}">
+        <flux:field.inline.fal name="image" allowedExtensions="jpg,jpeg,png,svg,gif"/>
+        <flux:grid>
+            <flux:grid.row>
+                <flux:grid.column colPos="0" name="content"/>
+            </flux:grid.row>
+        </flux:grid>
+    </flux:form>
+</f:section>
+
+<f:section name="Main">
+
+    <f:render partial="Rendering/Thumbnail" section="Main" arguments="{_all}"/>
+
+</f:section>
+</html>

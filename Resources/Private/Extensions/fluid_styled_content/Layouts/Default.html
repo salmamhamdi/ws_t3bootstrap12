@@ -1,0 +1,88 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+
+    <f:render partial="Assets" section="Element" optional="true" arguments="{_all}" />
+
+    <f:if condition="{data.html_tag} != none">
+        <f:then>
+
+            <f:if condition="{backgroundMedia.0}">
+                <f:if condition="{data.full_width}">
+                    <f:then>
+                        <ws:backgroundImage selector="#c{data.uid}" useBootstrapCropVariants="true" image="{backgroundMedia.0}" containerless="true"/>
+                    </f:then>
+                    <f:else>
+                        <ws:backgroundImage selector="#c{data.uid}" useBootstrapCropVariants="true" image="{backgroundMedia.0}"/>
+                    </f:else>
+                </f:if>
+            </f:if>
+            <v:tag class="{frame_classes}" id="c{data.uid}" name="{data.html_tag}" data="{data_attributes}">
+                <ws:tag.container fullwidth="{data.full_width}">
+
+                    <f:if condition="{data._LOCALIZED_UID}">
+                        <f:then>
+                            <a id="c{data._LOCALIZED_UID}"></a>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{data.l18n_parent}">
+                                <a id="c{data.l18n_parent}"></a>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+
+                    <f:if condition="{icon.codePosition} == 'frame'">
+                        <f:render partial="Icon" arguments="{_all}"/>
+                    </f:if>
+
+                    <div class="ce-content">
+
+                        <f:render section="Before" optional="true">
+                            <f:render partial="DropIn/Before/All" arguments="{_all}"/>
+                        </f:render>
+                        <f:render section="Header" optional="true">
+                            <f:render partial="Header/All" arguments="{_all}"/>
+                        </f:render>
+                        <f:render section="Main" optional="true"/>
+                        <f:render section="Footer" optional="true">
+                            <f:render partial="Footer/All" arguments="{_all}"/>
+                        </f:render>
+                        <f:render section="After" optional="true">
+                            <f:render partial="DropIn/After/All" arguments="{_all}"/>
+                        </f:render>
+                    </div>
+
+                </ws:tag.container>
+            </v:tag>
+
+        </f:then>
+        <f:else>
+
+            <a id="c{data.uid}"></a>
+            <f:if condition="{data._LOCALIZED_UID}">
+                <a id="c{data._LOCALIZED_UID}"></a>
+            </f:if>
+            <f:if condition="{data.space_before_class}">
+                <div class="frame-space-before-{data.space_before_class}"></div>
+            </f:if>
+            <f:render section="Before" optional="true">
+                <f:render partial="DropIn/Before/All" arguments="{_all}"/>
+            </f:render>
+            <f:render section="Header" optional="true">
+                <f:render partial="Header/All" arguments="{_all}"/>
+            </f:render>
+            <f:render section="Main" optional="true"/>
+            <f:render section="Footer" optional="true">
+                <f:render partial="Footer/All" arguments="{_all}"/>
+            </f:render>
+            <f:render section="After" optional="true">
+                <f:render partial="DropIn/After/All" arguments="{_all}"/>
+            </f:render>
+            <f:if condition="{data.space_after_class}">
+                <div class="frame-space-after-{data.space_after_class}"></div>
+            </f:if>
+
+        </f:else>
+    </f:if>
+</f:spaceless>
+</html>

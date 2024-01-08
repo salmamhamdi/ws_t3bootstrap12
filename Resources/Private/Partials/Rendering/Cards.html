@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Content"/>
+
+
+<f:section name="Main">
+
+    <f:switch expression="{layout}">
+        <f:case value="group">
+
+            <div class="card-group">
+                <flux:content.render area="cards"/>
+            </div>
+
+        </f:case>
+        <f:case value="deck">
+            <div class="row{f:if(condition: gridXs, then: ' row-cols-{gridXs}')}{f:if(condition: gridSm, then: ' row-cols-sm-{gridSm}')}{f:if(condition: gridMd, then: ' row-cols-md-{gridMd}')}{f:if(condition: gridLg, then: ' row-cols-lg-{gridLg}')}{f:if(condition: gridXl, then: ' row-cols-xl-{gridXl}')}{f:if(condition: gridXxl, then: ' row-cols-xxl-{gridXxl}')} {gutter}">
+                <f:for each="{flux:content.get(area: 'cards')}" as="card">
+                    <div class="col">
+                        {card -> f:format.raw()}
+                    </div>
+                </f:for>
+            </div>
+        </f:case>
+        <f:case value="grid-cards">
+
+            <div class="row{f:if(condition: gridXs, then: ' row-cols-{gridXs}')}{f:if(condition: gridSm, then: ' row-cols-sm-{gridSm}')}{f:if(condition: gridMd, then: ' row-cols-md-{gridMd}')}{f:if(condition: gridLg, then: ' row-cols-lg-{gridLg}')}{f:if(condition: gridXl, then: ' row-cols-xl-{gridXl}')}{f:if(condition: gridXxl, then: ' row-cols-xxl-{gridXxl}')} {gutter}">
+                <f:for each="{flux:content.get(area: 'cards')}" as="card">
+                    <div class="col">
+                        {card -> f:format.raw()}
+                    </div>
+                </f:for>
+            </div>
+
+        </f:case>
+        <f:case value="card-columns">
+
+            <div class="card-columns">
+                <flux:content.render area="cards"/>
+            </div>
+
+        </f:case>
+    </f:switch>
+
+</f:section>
+
+</html>

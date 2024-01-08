@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages">
+		<header/>
+		<body>
+
+			<trans-unit id="other.header">
+				<source>Sonstige</source>
+			</trans-unit>
+
+			<trans-unit id="header_layout.altLabels.0">
+				<target>Überschrift h2 (Standard)</target>
+			</trans-unit>
+
+			<trans-unit id="header_layout.altLabels.1">
+				<target>Überschrift h1 (eine pro Seite)</target>
+			</trans-unit>
+			<trans-unit id="header_layout.altLabels.2">
+				<target>Überschrift h2</target>
+			</trans-unit>
+			<trans-unit id="header_layout.altLabels.3">
+				<target>Überschrift h3</target>
+			</trans-unit>
+			<trans-unit id="header_layout.altLabels.4">
+				<target>Überschrift h4</target>
+			</trans-unit>
+			<trans-unit id="header_layout.altLabels.5">
+				<target>Überschrift h5</target>
+			</trans-unit>
+
+			<trans-unit id="frame_class.altLabels.ruler-before">
+				<target>Linie davor</target>
+			</trans-unit>
+			<trans-unit id="frame_class.altLabels.ruler-after">
+				<target>Linie danach</target>
+			</trans-unit>
+			<trans-unit id="frame_class.altLabels.indent">
+				<target>Einzug</target>
+			</trans-unit>
+			<trans-unit id="frame_class.altLabels.indent-left">
+				<target>Einzug links</target>
+			</trans-unit>
+			<trans-unit id="frame_class.altLabels.indent-right">
+				<target>Einzug rechts</target>
+			</trans-unit>
+
+			<trans-unit id="filelink_sorting.creation_date">
+				<target>nach Erzeugungsdatum</target>
+			</trans-unit>
+			<trans-unit id="filelink_sorting.modification_date">
+				<target>nach Änderungsdatum</target>
+			</trans-unit>
+
+			<trans-unit id="frame_class.g-max-770">
+				<target>Maximal 770 Pixel Breite</target>
+			</trans-unit>
+			<trans-unit id="frame_class.g-min-height-100vh">
+				<target>Minimal 100% Bildschirm-Höhe</target>
+			</trans-unit>
+			<trans-unit id="frame_class.g-min-height-100p">
+				<target>Minimal 100% Höhe</target>
+			</trans-unit>
+			<trans-unit id="frame_class.g-bg-black-opacity-0_5--after">
+				<target>Abdunkeln</target>
+			</trans-unit>
+			<trans-unit id="frame_class.g-flex-centered">
+				<target>Vertikal zentriert</target>
+			</trans-unit>
+			<trans-unit id="frame_class.bg-min-height">
+				<target>Hintergrundbild mit Mindesthöhe</target>
+			</trans-unit>
+
+
+			<trans-unit id="frame_class.types.card.text-left">
+				<target>Text linksbündig</target>
+			</trans-unit>
+			<trans-unit id="frame_class.types.card.text-center">
+				<target>Text mittig</target>
+			</trans-unit>
+			<trans-unit id="frame_class.types.card.text-right">
+				<target>Text rechtsbündig</target>
+			</trans-unit>
+
+			<trans-unit id="header_layout.types.card.altLabels.0">
+				<target>Keine Überschrift</target>
+			</trans-unit>
+
+
+			<trans-unit id="image_classes.img-thumbnail">
+				<target>Vorschaubild</target>
+			</trans-unit>
+			<trans-unit id="image_classes.img-rounded">
+				<target>Abgerundet</target>
+			</trans-unit>
+			<trans-unit id="image_classes.img-circle">
+				<target>Kreis</target>
+			</trans-unit>
+
+			<trans-unit id="image_orient">
+				<target>Ausrichtung einzelner Bilder</target>
+			</trans-unit>
+			<trans-unit id="image_orient.none">
+				<target>Standard</target>
+			</trans-unit>
+			<trans-unit id="image_orient.left">
+				<target>Links</target>
+			</trans-unit>
+			<trans-unit id="image_orient.center">
+				<target>Mittig</target>
+			</trans-unit>
+			<trans-unit id="image_orient.right">
+				<target>Rechts</target>
+			</trans-unit>
+
+            <trans-unit id="bg_color_class.none">
+                <target>keine</target>
+            </trans-unit>
+            <trans-unit id="bg_color_class.label.custom">
+                <target>Benutzerdefinierte Farben</target>
+            </trans-unit>
+            <trans-unit id="bg_color_class.label.bootstrap-theme-colors">
+                <target>Bootstrap Theme Farben</target>
+            </trans-unit>
+            <trans-unit id="bg_color_class.label.bootstrap-palette-colors">
+                <target>Bootstrap Farbpalette</target>
+            </trans-unit>
+
+			<trans-unit id="bg_color_class.bg-lightgray">
+				<target>Helles Grau</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-lightblue">
+				<target>Helles Blau</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-primary">
+				<target>Primär Farbe</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-secondary">
+				<target>Sekundär Farbe</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-success">
+				<target>Erfolg</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-info">
+				<target>Info</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-warning">
+				<target>Warnung</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-danger">
+				<target>Gefahr</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-light">
+				<target>Hell</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-dark">
+				<target>Dunkel</target>
+			</trans-unit>
+
+			<trans-unit id="bg_color_class.bg-blue">
+				<target>Blau</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-indigo">
+				<target>Indigo</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-purple">
+				<target>Lila</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-pink">
+				<target>Pink</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-red">
+				<target>Rot</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-orange">
+				<target>Orange</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-yellow">
+				<target>Gelb</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-green">
+				<target>Grün</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-teal">
+				<target>Blaugrün</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-cyan">
+				<target>Cyan</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-white">
+				<target>Weiss</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-gray">
+				<target>Grau</target>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-gray-dark">
+				<target>Dunkelgrau</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+	<file t3:id="1415234424" source-language="en" datatype="plaintext" original="messages" product-name="ws_t3bootstrap">
+		<header/>
+		<body>
+
+			<trans-unit id="header_groups.description">
+				<source>Add a special class to the headline tag. For example group to group them for equal height.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

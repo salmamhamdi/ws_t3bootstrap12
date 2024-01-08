@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-02-07T11:13:04Z"
+		  product-name="ws_t3bootstrap">
+		<header/>
+		<body>
+
+			<trans-unit id="other.header">
+				<source>Other</source>
+			</trans-unit>
+
+			<trans-unit id="header_layout.altLabels.0">
+				<source>Headline h2 (Standard)</source>
+			</trans-unit>
+
+			<trans-unit id="header_layout.altLabels.1">
+				<source>Headline h1 (one per page)</source>
+			</trans-unit>
+			<trans-unit id="header_layout.altLabels.2">
+				<source>Headline h2</source>
+			</trans-unit>
+			<trans-unit id="header_layout.altLabels.3">
+				<source>Headline h3</source>
+			</trans-unit>
+			<trans-unit id="header_layout.altLabels.4">
+				<source>Headline h4</source>
+			</trans-unit>
+			<trans-unit id="header_layout.altLabels.5">
+				<source>Headline h5</source>
+			</trans-unit>
+
+			<trans-unit id="frame_class.altLabels.ruler-before">
+				<source>Line before</source>
+			</trans-unit>
+			<trans-unit id="frame_class.altLabels.ruler-after">
+				<source>Line after</source>
+			</trans-unit>
+			<trans-unit id="frame_class.altLabels.indent">
+				<source>Indent</source>
+			</trans-unit>
+			<trans-unit id="frame_class.altLabels.indent-left">
+				<source>Indent left</source>
+			</trans-unit>
+			<trans-unit id="frame_class.altLabels.indent-right">
+				<source>Indent right</source>
+			</trans-unit>
+			<trans-unit id="frame_class.no-side-padding">
+				<source>No side padding</source>
+			</trans-unit>
+
+			<trans-unit id="filelink_sorting.creation_date">
+				<source>By creation date</source>
+			</trans-unit>
+			<trans-unit id="filelink_sorting.modification_date">
+				<source>By modification date</source>
+			</trans-unit>
+
+			<trans-unit id="frame_class.g-max-770">
+				<source>Maximum 770 pixel width</source>
+			</trans-unit>
+			<trans-unit id="frame_class.g-min-height-100vh">
+				<source>Minimum 100% screen-height</source>
+			</trans-unit>
+			<trans-unit id="frame_class.g-min-height-100p">
+				<source>Minimum 100% height</source>
+			</trans-unit>
+			<trans-unit id="frame_class.g-bg-black-opacity-0_5--after">
+				<source>Darken</source>
+			</trans-unit>
+			<trans-unit id="frame_class.g-flex-centered">
+				<source>Vertical centered</source>
+			</trans-unit>
+			<trans-unit id="frame_class.bg-min-height">
+				<source>Background image with min-height</source>
+			</trans-unit>
+
+
+			<trans-unit id="frame_class.types.card.text-left">
+				<source>Text aligned left</source>
+			</trans-unit>
+			<trans-unit id="frame_class.types.card.text-center">
+				<source>Text aligned centered</source>
+			</trans-unit>
+			<trans-unit id="frame_class.types.card.text-right">
+				<source>Text aligned right</source>
+			</trans-unit>
+
+			<trans-unit id="header_layout.types.card.altLabels.0">
+				<source>No headline</source>
+			</trans-unit>
+
+
+			<trans-unit id="image_classes.img-thumbnail">
+				<source>Thumbnail</source>
+			</trans-unit>
+			<trans-unit id="image_classes.img-rounded">
+				<source>Rounded</source>
+			</trans-unit>
+			<trans-unit id="image_classes.img-circle">
+				<source>Circle</source>
+			</trans-unit>
+
+			<trans-unit id="image_orient">
+				<source>Single image orientation</source>
+			</trans-unit>
+			<trans-unit id="image_orient.none">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="image_orient.left">
+				<source>Left</source>
+			</trans-unit>
+			<trans-unit id="image_orient.center">
+				<source>Center</source>
+			</trans-unit>
+			<trans-unit id="image_orient.right">
+				<source>Right</source>
+			</trans-unit>
+
+			<trans-unit id="bg_color_class.bg-lightgray">
+				<source>light gray</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-lightblue">
+				<source>light blue</source>
+			</trans-unit>
+
+			<trans-unit id="bg_color_class.bg-primary">
+				<source>Primary color</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-secondary">
+				<source>Secondary color</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-success">
+				<source>Success</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-info">
+				<source>Info</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-warning">
+				<source>Warning</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-danger">
+				<source>Danger</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-light">
+				<source>Light</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-dark">
+				<source>Dark</source>
+			</trans-unit>
+
+			<trans-unit id="bg_color_class.bg-blue">
+				<source>Blue</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-indigo">
+				<source>Indigo</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-purple">
+				<source>Purple</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-pink">
+				<source>Pink</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-red">
+				<source>Red</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-orange">
+				<source>Orange</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-yellow">
+				<source>Yellow</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-green">
+				<source>Green</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-teal">
+				<source>Teal</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-cyan">
+				<source>Cyan</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-white">
+				<source>White</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-gray">
+				<source>Gray</source>
+			</trans-unit>
+			<trans-unit id="bg_color_class.bg-gray-dark">
+				<source>Dark gray</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

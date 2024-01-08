@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-02-07T11:13:04Z"
+		  product-name="ws_t3bootstrap">
+		<header/>
+		<body>
+
+			<trans-unit id="options">
+				<source>Options</source>
+			</trans-unit>
+			<trans-unit id="advanced">
+				<source>Advanced</source>
+			</trans-unit>
+			<trans-unit id="label">
+				<source>Label</source>
+			</trans-unit>
+
+			<trans-unit id="card">
+				<source>Card</source>
+			</trans-unit>
+			<trans-unit id="card-body">
+				<source>Card body</source>
+			</trans-unit>
+			<trans-unit id="card-body.description">
+				<source>The body part of the card element</source>
+			</trans-unit>
+			<trans-unit id="card-media">
+				<source>Card media</source>
+			</trans-unit>
+			<trans-unit id="card-list">
+				<source>Card list</source>
+			</trans-unit>
+			<trans-unit id="card-element">
+				<source>Card element</source>
+			</trans-unit>
+			<trans-unit id="card_elements">
+				<source>Card elements</source>
+			</trans-unit>
+			<trans-unit id="card.tt_content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="card-element.text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="card-element.media">
+				<source>Media</source>
+			</trans-unit>
+			<trans-unit id="card-element.list">
+				<source>List</source>
+			</trans-unit>
+			<trans-unit id="card.image_overlay">
+				<source>Image overlay</source>
+			</trans-unit>
+			<trans-unit id="effect">
+				<source>Effect</source>
+			</trans-unit>
+			<trans-unit id="card.card_elements_backside">
+				<source>Card elements on the backside</source>
+			</trans-unit>
+
+			<trans-unit id="pages.palettes.hero">
+				<source>Hero</source>
+			</trans-unit>
+			<trans-unit id="pages.tabs.hero">
+				<source>Hero</source>
+			</trans-unit>
+
+			<trans-unit id="compare_slider">
+				<source>Compare slider</source>
+			</trans-unit>
+			<trans-unit id="compare_slider.description">
+				<source>A slider to compare two images</source>
+			</trans-unit>
+
+
+			<trans-unit id="content_element.cards-carousel">
+				<source>Cards Carousel</source>
+			</trans-unit>
+			<trans-unit id="content_element.cards-carousel.description">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="cardscarousel_item.header">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="cardscarousel_item.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="content_element.card">
+				<source>Card</source>
+			</trans-unit>
+			<trans-unit id="content_element.card.description">
+				<source>Card element with an image and two links</source>
+			</trans-unit>
+
+			<trans-unit id="content_element.products">
+				<source>Products</source>
+			</trans-unit>
+
+			<trans-unit id="cardscarousel_item.link">
+				<source>Link</source>
+			</trans-unit>
+
+			<trans-unit id="content_element.number-carousel">
+				<source>Carousel with big numbers</source>
+			</trans-unit>
+			<trans-unit id="content_element.number-carousel.description">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="numbercarousel_item">
+				<source>Number Carousel Element</source>
+			</trans-unit>
+			<trans-unit id="numbercarousel_item.header">
+				<source>Name</source>
+			</trans-unit>
+
+			<trans-unit id="counterbar.title">
+				<source>Counter bar</source>
+			</trans-unit>
+			<trans-unit id="counterbar">
+				<source>Counter bar</source>
+			</trans-unit>
+
+
+			<trans-unit id="counterbar.description">
+				<source>A Bar Element that can be filled with several counter items.</source>
+			</trans-unit>
+			<trans-unit id="counterbar.column_count">
+				<source>Column count</source>
+			</trans-unit>
+			<trans-unit id="counterbar.column_count.1">
+				<source>One Column</source>
+			</trans-unit>
+			<trans-unit id="counterbar.column_count.2">
+				<source>Two Columns</source>
+			</trans-unit>
+			<trans-unit id="counterbar.column_count.3">
+				<source>Three Columns</source>
+			</trans-unit>
+			<trans-unit id="counterbar.column_count.4">
+				<source>Four Columns</source>
+			</trans-unit>
+			<trans-unit id="counterbar.item">
+				<source>Counter</source>
+			</trans-unit>
+			<trans-unit id="content_element.counterbar.columns">
+				<source>Columns</source>
+			</trans-unit>
+
+			<trans-unit id="counterbar_item.header">
+				<source>Label</source>
+			</trans-unit>
+
+
+			<trans-unit id="counterbar_item.fontawesome_icon">
+				<source>Fontawesome HTML tag (look up at https://fontawesome.com/icons?d=gallery)</source>
+			</trans-unit>
+			<trans-unit id="counterbar_item.count_number">
+				<source>Number the counter shall show</source>
+			</trans-unit>
+			<trans-unit id="counterbar_item.counter_text">
+				<source>Description text of this counter</source>
+			</trans-unit>
+
+
+			<trans-unit id="timeline.title">
+				<source>Timeline</source>
+			</trans-unit>
+			<trans-unit id="timeline">
+				<source>Timeline</source>
+			</trans-unit>
+			<trans-unit id="timeline.description">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="content_element.timeline.style">
+				<source>Style</source>
+			</trans-unit>
+			<trans-unit id="timeline_item">
+				<source>Timeline item</source>
+			</trans-unit>
+
+
+			<trans-unit id="timeline_item.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="timeline_item.header">
+				<source>Title</source>
+			</trans-unit>
+
+
+			<trans-unit id="placeholder.searchForIcon">
+				<source>Search for icon</source>
+			</trans-unit>
+
+
+			<trans-unit id="header_size">
+				<source>Height of the header area</source>
+			</trans-unit>
+			<trans-unit id="header_size.small">
+				<source>Small</source>
+			</trans-unit>
+			<trans-unit id="header_size.big">
+				<source>Big</source>
+			</trans-unit>
+			<trans-unit id="header_size.fullscreen">
+				<source>Fullscreen</source>
+			</trans-unit>
+
+			<trans-unit id="header_big">
+				<source>Large header area</source>
+			</trans-unit>
+			<trans-unit id="header_darken">
+				<source>Darken header image</source>
+			</trans-unit>
+			<trans-unit id="nav_hide_subtree">
+				<source>Hide pages in the navigation below this page</source>
+			</trans-unit>
+			<trans-unit id="heroimage">
+				<source>Flat header image</source>
+			</trans-unit>
+			<trans-unit id="heroimage_big">
+				<source>Media for high hero size</source>
+			</trans-unit>
+			<trans-unit id="heromedia_fullscreen">
+				<source>Fullscreen header media</source>
+			</trans-unit>
+			<trans-unit id="preview_image">
+				<source>Preview image for menus</source>
+			</trans-unit>
+			<trans-unit id="heroslide">
+				<source>Inheritance of hero image</source>
+			</trans-unit>
+			<trans-unit id="heroslide.infinite">
+				<source>Infinite</source>
+			</trans-unit>
+			<trans-unit id="heroslide.none">
+				<source>None</source>
+			</trans-unit>
+			<trans-unit id="heroslide.1">
+				<source>1 level</source>
+			</trans-unit>
+			<trans-unit id="heroslide.2">
+				<source>2 levels</source>
+			</trans-unit>
+			<trans-unit id="heroslide.3">
+				<source>3 levels</source>
+			</trans-unit>
+			<trans-unit id="heroslide.4">
+				<source>4 levels</source>
+			</trans-unit>
+			<trans-unit id="jumbotron">
+				<source>Use padding in hero area</source>
+			</trans-unit>
+			<trans-unit id="heroContainer">
+				<source>Limit hero with container class</source>
+			</trans-unit>
+			<trans-unit id="image_classes">
+				<source>Image classes</source>
+			</trans-unit>
+			<trans-unit id="element_classes">
+				<source>Element classes</source>
+			</trans-unit>
+			<trans-unit id="visibility">
+				<source>Visibility</source>
+			</trans-unit>
+
+			<trans-unit id="imagecols_xs">
+				<source>XS</source>
+			</trans-unit>
+			<trans-unit id="imagecols_sm">
+				<source>SM</source>
+			</trans-unit>
+			<trans-unit id="imagecols_md">
+				<source>MD</source>
+			</trans-unit>
+			<trans-unit id="imagecols_lg">
+				<source>LG</source>
+			</trans-unit>
+			<trans-unit id="imagecols_xl">
+				<source>XL</source>
+			</trans-unit>
+			<trans-unit id="imagecols_xxl">
+				<source>XXL</source>
+			</trans-unit>
+
+			<trans-unit id="background_media">
+				<source>Background media</source>
+			</trans-unit>
+			<trans-unit id="add_media">
+				<source>Add media</source>
+			</trans-unit>
+			<trans-unit id="effects">
+				<source>Effects</source>
+			</trans-unit>
+
+			<trans-unit id="padding_top_class">
+				<source>Padding top</source>
+			</trans-unit>
+			<trans-unit id="padding_bottom_class">
+				<source>Padding bottom</source>
+			</trans-unit>
+
+			<trans-unit id="prevent_link">
+				<source>Don't use link in menu (Attention: The sidebar menu uses the standard shortcut behavior)
+				</source>
+			</trans-unit>
+
+
+			<trans-unit id="imageManipulation.smartphone">
+				<source>Smartphone</source>
+			</trans-unit>
+			<trans-unit id="imageManipulation.tablet">
+				<source>Tablet</source>
+			</trans-unit>
+			<trans-unit id="imageManipulation.desktop">
+				<source>Desktop</source>
+			</trans-unit>
+			<trans-unit id="imageManipulation.fullscreen">
+				<source>Fullscreen</source>
+			</trans-unit>
+			<trans-unit id="imageManipulation.s360">
+				<source>360 Pixel (Smartphone)</source>
+			</trans-unit>
+			<trans-unit id="imageManipulation.s576">
+				<source>576 Pixel (Smartphone)</source>
+			</trans-unit>
+			<trans-unit id="imageManipulation.s768">
+				<source>768 Pixel (Smartphone)</source>
+			</trans-unit>
+			<trans-unit id="imageManipulation.s992">
+				<source>992 Pixel (Tablet)</source>
+			</trans-unit>
+			<trans-unit id="imageManipulation.s1200">
+				<source>1200 Pixel (Laptop)</source>
+			</trans-unit>
+			<trans-unit id="imageManipulation.s1400">
+				<source>1400 Pixel (Desktop)</source>
+			</trans-unit>
+
+
+			<trans-unit id="grid_layout.50t-50g">
+				<source>50% text left, 50% gallery right</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.50g-50t">
+				<source>50% gallery left, 50% text right</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.50m-50g">
+				<source>50% single image left, 50% gallery right</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.50g-50m">
+				<source>50% gallery left, 50% single image right</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.66t-33g">
+				<source>66% text left, 33% gallery right</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.33g-66t">
+				<source>33% gallery left, 66% text right</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.33g-66t-f">
+				<source>33% gallery left, 66% text flowing around right</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.66t-33g-f">
+				<source>66% text flowing around left, 33% gallery right</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.50g-50t-f">
+				<source>50% gallery left, 50% text flowing around right</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.50t-50g-f">
+				<source>50% text flowing around left, 50% gallery right</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.33t-66g">
+				<source>33% text left, 66% gallery right</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.66g-33t">
+				<source>66% gallery left, 33% text right</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.100t-100g">
+				<source>Text above, gallery below</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.100g-100t">
+				<source>Gallery above, text below</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.100m-100g">
+				<source>Single image above, gallery below</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.33m-33t-33g">
+				<source>Image left, text centered, gallery right</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.50t-50mb">
+				<source>50% text left, 50% single image right as background</source>
+			</trans-unit>
+			<trans-unit id="grid_layout.50mb-50t">
+				<source>50% single image left as background, 50% text right</source>
+			</trans-unit>
+
+
+			<trans-unit id="footer">
+				<source>Footer</source>
+			</trans-unit>
+			<trans-unit id="footer_formlabel">
+				<source>Footer</source>
+			</trans-unit>
+			<trans-unit id="footer_position">
+				<source>Align</source>
+			</trans-unit>
+			<trans-unit id="footer_position_formlabel">
+				<source>Alignment</source>
+			</trans-unit>
+			<trans-unit id="footer_position.I.1">
+				<source>Center</source>
+			</trans-unit>
+			<trans-unit id="footer_position.I.2">
+				<source>Right</source>
+			</trans-unit>
+			<trans-unit id="footer_position.I.3">
+				<source>Left</source>
+			</trans-unit>
+			<trans-unit id="footer_link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="footer_link_formlabel">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="footer_layout_formlabel">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="footer_layout.I.1">
+				<source>Layout 1</source>
+			</trans-unit>
+			<trans-unit id="footer_layout.I.2">
+				<source>Layout 2</source>
+			</trans-unit>
+			<trans-unit id="footer_layout.I.3">
+				<source>Layout 3</source>
+			</trans-unit>
+			<trans-unit id="footer_layout.I.4">
+				<source>Layout 4</source>
+			</trans-unit>
+			<trans-unit id="footer_layout.I.5">
+				<source>Layout 5</source>
+			</trans-unit>
+			<trans-unit id="footer_layout.I.6">
+				<source>Hidden</source>
+			</trans-unit>
+			<trans-unit id="bg_color">
+				<source>Background Color</source>
+			</trans-unit>
+			<trans-unit id="levels">
+				<source>Levels</source>
+			</trans-unit>
+
+			<trans-unit id="tt_content.palette.imageColumns">
+				<source>Number of image columns</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gridLayout">
+				<source>Grid layout of Text/Image</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gridLayout_responsive_bg">
+				<source>Image behavior on mobile devices</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gridLayout_responsive_bg.none">
+				<source>Disable</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gridLayout_responsive_bg.dark-overlay">
+				<source>Darkened as Background</source>
+			</trans-unit>
+			<trans-unit id="tt_content.gridLayout_responsive_bg.bright-overlay">
+				<source>Brightened as Background</source>
+			</trans-unit>
+			<trans-unit id="tt_content.full_width">
+				<source>Full width</source>
+			</trans-unit>
+			<trans-unit id="tt_content.fixed_image">
+				<source>Attach image to background</source>
+			</trans-unit>
+			<trans-unit id="tt_content.image_loading_behaviour">
+				<source>Image loading behaviour</source>
+			</trans-unit>
+			<trans-unit id="tt_content.icon">
+				<source>Icon</source>
+			</trans-unit>
+			<trans-unit id="tt_content.icon_style">
+				<source>Icon style</source>
+			</trans-unit>
+			<trans-unit id="tt_content.icon_color">
+				<source>Icon color</source>
+			</trans-unit>
+			<trans-unit id="tt_content.icon_size">
+				<source>Icon size</source>
+			</trans-unit>
+			<trans-unit id="tt_content.icon_position">
+				<source>Icon position</source>
+			</trans-unit>
+			<trans-unit id="tt_content.form_layout">
+				<source>Form layout</source>
+			</trans-unit>
+
+
+			<trans-unit id="palette.seo">
+				<source>SEO</source>
+			</trans-unit>
+			<trans-unit id="tab.seo">
+				<source>SEO</source>
+			</trans-unit>
+			<trans-unit id="palette.responsive">
+				<source>Responsive Design</source>
+			</trans-unit>
+			<trans-unit id="palette.content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="palette.icon">
+				<source>Icon</source>
+			</trans-unit>
+			<trans-unit id="palette.background">
+				<source>Background</source>
+			</trans-unit>
+
+
+			<!-- AOS -->
+			<trans-unit id="palette.aos">
+				<source>On Scroll Animations</source>
+			</trans-unit>
+			<trans-unit id="animate-on-scroll.type">
+				<source>Animation Type</source>
+			</trans-unit>
+			<trans-unit id="animate-on-scroll.easing">
+				<source>Easing</source>
+			</trans-unit>
+			<trans-unit id="animate-on-scroll.once">
+				<source>Perform Once</source>
+			</trans-unit>
+			<trans-unit id="animate-on-scroll.duration">
+				<source>Duration in milliseconds</source>
+			</trans-unit>
+			<trans-unit id="animate-on-scroll.delay">
+				<source>Delay in milliseconds</source>
+			</trans-unit>
+			<trans-unit id="animate-on-scroll.offset">
+				<source>Activation Offset (in px)</source>
+			</trans-unit>
+			<trans-unit id="animate-on-scroll.fade">
+				<source>Fade</source>
+			</trans-unit>
+			<trans-unit id="animate-on-scroll.flip">
+				<source>Flip</source>
+			</trans-unit>
+			<trans-unit id="animate-on-scroll.slide">
+				<source>Slide</source>
+			</trans-unit>
+			<trans-unit id="animate-on-scroll.zoom">
+				<source>Zoom</source>
+			</trans-unit>
+
+
+			<trans-unit id="html_tag">
+				<source>HTML Tag</source>
+			</trans-unit>
+
+			<trans-unit id="frame_class.group.indents">
+				<source>Indents</source>
+			</trans-unit>
+			<trans-unit id="frame_class.group.lines">
+				<source>Lines</source>
+			</trans-unit>
+			<trans-unit id="frame_class.group.design">
+				<source>Design</source>
+			</trans-unit>
+
+
+			<trans-unit id="use_link_overlay">
+				<source>Use this link as overlay</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

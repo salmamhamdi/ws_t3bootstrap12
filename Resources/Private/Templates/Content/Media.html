@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Content"/>
+
+<f:section name="Configuration">
+    <flux:form id="media" options="{group: 'Bootstrap',icon:'content-media'}">
+        <flux:field.inline.fal maxItems="1" name="image" allowedExtensions="jpg,jpeg,png,svg,gif"/>
+
+        <flux:field.input name="icon"/>
+
+        <flux:grid>
+            <flux:grid.row>
+                <flux:grid.column colPos="0" name="content"/>
+            </flux:grid.row>
+        </flux:grid>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+
+    <v:variable.set name="falImage" value="{v:content.resources.fal(field: 'image') -> v:iterator.first()}"/>
+
+    <f:if condition="{falImage}">
+        <f:image src="{falImage.uid}" treatIdAsReference="TRUE" maxWidth="64"/>
+    </f:if>
+
+</f:section>
+
+<f:section name="Main">
+
+    <f:render partial="Rendering/Media" section="Main" arguments="{_all}"/>
+
+</f:section>
+</html>

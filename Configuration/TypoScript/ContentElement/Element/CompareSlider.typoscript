@@ -1,0 +1,28 @@
+###############################
+#### CTYPE: compare_slider ####
+###############################
+
+tt_content.compare_slider >
+tt_content.compare_slider =< lib.contentElement
+tt_content.compare_slider {
+
+    layoutRootPaths.2000 = EXT:ws_t3bootstrap/Resources/Private/Extensions/fluid_styled_content/Layouts/
+
+    ################
+    ### TEMPLATE ###
+    ################
+    templateName = CompareSlider
+
+    ##########################
+    ### DATA PREPROCESSING ###
+    ##########################
+    dataProcessing {
+
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = image
+            as = media
+        }
+
+    }
+}

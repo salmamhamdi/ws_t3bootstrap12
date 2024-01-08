@@ -1,0 +1,87 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:section name="Main">
+
+    <f:render partial="Assets" section="Megamenu" optional="true"/>
+
+    <v:variable.set name="activeTabIndex" value="0"/>
+    <f:if condition="{items}">
+        <f:for each="{items}" as="item" iteration="iteration">
+            <f:if condition="{item.item.active}">
+                <v:variable.set name="activeTabIndex" value="{iteration.index}"/>
+            </f:if>
+        </f:for>
+    </f:if>
+
+
+    <f:if condition="{items}">
+        <ul class="nav navbar-nav megamenu {cssClass} hidden-print">
+            <f:for each="{items}" as="item" iteration="iteration">
+
+                <f:if condition="{item.item.dropdownType} == 'mega'">
+                    <li class="nav-item dropdown dropdown-mega nav-item-{item.item.page}">
+
+                        <a href="#" role="button" class="nav-link dropdown-toggle {ws:condition.page.isInRootline(pageUid:item.item.page,then:'active')}" type="button" id="megamenu-btn-{item.item.page}" data-bs-toggle="dropdown" aria-expanded="false">
+                            {f:if(condition: '{v:page.info(pageUid: item.item.page, field: \'nav_title\')}', then: '{v:page.info(pageUid: item.item.page, field: \'nav_title\')}', else: '{v:page.info(pageUid: item.item.page, field: \'title\')}')}
+                        </a>
+
+
+                        <ul class="dropdown-menu mega-menu" aria-labelledby="megamenu-btn-{item.item.page}">
+                            <li>
+                                <div class="dropdown-content">
+                                    <flux:content.render area="content.{iteration.index}"/>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </f:if>
+                <f:if condition="{item.item.dropdownType} == 'classic'">
+
+                    <li class="nav-item{f:if(condition: item.item.hasSubPages, then: ' dropdown')} nav-item-{item.item.uid} position-relative">
+                        <a href="#" role="button" class="nav-link dropdown-toggle {ws:condition.page.isInRootline(pageUid:item.item.page,then:'active')}" type="button" id="megamenu-btn-{item.item.page}" data-bs-toggle="dropdown" aria-expanded="false">
+                            {f:if(condition: '{v:page.info(pageUid: item.item.page, field: \'nav_title\')}', then: '{v:page.info(pageUid: item.item.page, field: \'nav_title\')}', else: '{v:page.info(pageUid: item.item.page, field: \'title\')}')}
+                        </a>
+                        <!-- Sub menu -->
+
+                        <v:menu pageUid="{item.item.page}" includeSpacers="false" expandAll="false">
+                            <f:if condition="{menu}">
+                                <ul class="dropdown-menu collapse" role="menu">
+
+                                    <f:for each="{menu}" as="subMenuPage" iteration="subIteration">
+                                        <li class="">
+                                            <a {f:if(condition: '!{subMenuPage.prevent_link}', then: 'href="{subMenuPage.link}"', else: 'href="#prevent-link"')} class="dropdown-item {subMenuPage.class}">
+                                            {f:if(condition: subMenuPage.nav_title, then: subMenuPage.nav_title, else: subMenuPage.title)}
+                                            </a>
+
+                                        </li>
+                                    </f:for>
+                                </ul>
+                            </f:if>
+                        </v:menu>
+                    </li>
+
+                </f:if>
+                <f:if condition="{item.item.dropdownType} == ''">
+                    <v:menu.list pages="{item.item.page}">
+                        <f:if condition="{menu}">
+                            <f:for each="{menu}" as="subMenuPage" iteration="subIteration">
+                                <li class="nav-item">
+                                    <a class="nav-link {subMenuPage.class}" href="{subMenuPage.link}">{f:if(condition: subMenuPage.nav_title, then: subMenuPage.nav_title, else: subMenuPage.title)}</a>
+                                </li>
+                            </f:for>
+                        </f:if>
+                    </v:menu.list>
+
+                </f:if>
+
+            </f:for>
+        </ul>
+    </f:if>
+
+</f:section>
+</html>

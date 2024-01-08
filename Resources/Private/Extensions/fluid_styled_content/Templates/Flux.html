@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="NoFrame"/>
+<f:section name="Main">
+
+    <f:comment>This templates is used to provide nessesary functionality for external processed content and could be used across multiple sources, for example the frontend login content element.</f:comment>
+    <f:if condition="{content}">
+        <f:then>{content -> f:format.raw()}</f:then>
+        <f:else>
+            <f:cObject typoscriptObjectPath="tt_content.{data.CType}.20" data="{v:iterator.merge(a:data,b:'{frame_classes:frame_classes}')}" table="tt_content"/>
+        </f:else>
+    </f:if>
+
+</f:section>
+</html>

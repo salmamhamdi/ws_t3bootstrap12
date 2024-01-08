@@ -1,0 +1,11 @@
+plugin.tx_form {
+    view {
+        templateRootPaths.20 = EXT:ws_t3bootstrap/Resources/Private/Extensions/form/Frontend/Templates/
+        partialRootPaths.20 = EXT:ws_t3bootstrap/Resources/Private/Extensions/form/Frontend/Partials/
+    }
+
+    settings.yamlConfigurations {
+        71 = EXT:ws_t3bootstrap/Configuration/Yaml/FormSetup.yaml
+    }
+
+}

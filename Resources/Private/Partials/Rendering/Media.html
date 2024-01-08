@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:section name="Main">
+
+    <v:variable.set name="falImage" value="{v:content.resources.fal(field: 'image') -> v:iterator.first()}"/>
+
+    <div class="media">
+        <div class="media-left">
+            <f:if condition="{falImage}">
+                <f:image src="{falImage.uid}" treatIdAsReference="1" maxWidth="64" class="media-object"/>
+            </f:if>
+            <f:if condition="{icon}">
+                <i class="fa {icon}"></i>
+            </f:if>
+        </div>
+        <div class="media-body">
+            <flux:content.render area="content"/>
+        </div>
+    </div>
+</f:section>
+
+</html>

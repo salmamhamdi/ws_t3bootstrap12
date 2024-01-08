@@ -1,0 +1,115 @@
+####################################################
+## Copyright notice
+## (c) 2013 Sven Wappler <typo3YYYY@wapplersystems.de>
+## All rights reserved
+##
+## This script is licensed under a Creative Commons Licence
+## German language:
+## http://creativecommons.org/licenses/by-nc-sa/2.0/de/deed.de
+## English language:
+## http://creativecommons.org/licenses/by-nc-sa/2.0/de/deed.en
+##
+## This copyright notice MUST APPEAR in all copies of the script.
+####################################################
+## Bootstrap for TemplaVoila
+## static Constants
+####################################################
+
+# customcategory=wst3bootstrap-privacypolicy=Template: Privacy policies
+
+extkey = EXT:ws_t3bootstrap
+
+headercomment = T3Bootstrap Template by WapplerSystems. https://t3bootstrap.de
+
+
+plugin.tx_wst3bootstrap.settings {
+
+  ######################## Privacy Policies #########################
+  privacyPolicies {
+
+    #cat=wst3bootstrap-privacypolicy/optin-video/a; type=boolean; label=Use Opt-In for embedded videos
+    optinVideo =
+
+    google {
+      #cat=wst3bootstrap-privacypolicy/privacy-policy/b; type=text; label=Google privacy policy
+      defaultLang = https://policies.google.com/privacy
+    }
+
+    vimeo {
+      #cat=wst3bootstrap-privacypolicy/privacy-policy/b; type=text; label=Vimeo privacy policy
+      defaultLang = https://vimeo.com/privacy
+    }
+
+  }
+
+  ######################### bootstrap variables ################################
+
+  # cat=bootstrap-variables/screen/a; type=int+; label=Font size root in px
+  font-size-root = 16
+
+
+  breakpoints {
+    xs = 0
+    sm = 576
+    md = 768
+    lg = 992
+    xl = 1200
+    xxl = 1400
+  }
+
+  breakpointsMax {
+    xs = 575.98
+    sm = 767.98
+    md = 991.98
+    lg = 1199.98
+    xl = 1399.98
+    xxl = inf
+  }
+
+  containerWidths {
+    sm = 540
+    md = 720
+    lg = 960
+    xl = 1140
+    xxl = 1340
+  }
+
+  # cat=bootstrap-variables/screen/z; type=int+; label=Maximum image size
+  imageFullWidth = 2200
+
+  # cat=bootstrap-variables/grid/a; type=int+; label=Number of grid columns: Set this to the same number used in your custom Bootstrap CSS if you've switched from the default 12-grid
+  gridColumns = 12
+
+  # cat=bootstrap-variables/grid/b; type=string; label=Default grid layout for text/media elements
+  defaultGridLayout = 100g:100t
+
+  cropVariantFullWidth = full
+
+  fullwidthClass = img-fullwidth
+
+  icon {
+    # cat=bootstrap-variables/icon/a; type=options[SVG=svg,Icon Font=iconfont]; label=Icon rendering: Render icons as SVG
+    rendering = svg
+
+    # cat=bootstrap-variables/icon/b; type=options[Small=sm,Medium=md,Large=lg]; label=Default icon size
+    defaultSize = md
+
+    # cat=bootstrap-variables/icon/b; type=string; label=Default icon color
+    defaultColor = darkgray
+  }
+
+
+  content {
+
+    padding {
+      top = none
+      bottom = none
+    }
+
+    margin {
+      top = none
+      bottom = none
+    }
+
+  }
+}

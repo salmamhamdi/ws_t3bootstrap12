@@ -1,0 +1,41 @@
+{
+	"name": "wapplersystems/ws_t3bootstrap",
+	"type": "typo3-cms-extension",
+	"description": "",
+	"keywords": [
+		"TYPO3",
+		"extension"
+	],
+	"homepage": "https://wappler.systems",
+	"authors": [
+		{
+			"name": "Sven Wappler",
+			"role": "Developer",
+			"homepage": "https://wappler.systems"
+		}
+	],
+	"license": [
+		"GPL-2.0+"
+	],
+	"require": {
+		"typo3/cms-core": "^12.0",
+		"typo3/cms-filemetadata": "^12",
+		"fluidtypo3/flux": "^9.5.0",
+		"fluidtypo3/vhs": "^6",
+		"wapplersystems/videos": "^12"
+	},
+	"suggest": {
+	},
+	"require-dev": {
+	},
+	"autoload": {
+		"psr-4": {
+			"WapplerSystems\\WsT3bootstrap\\": "Classes"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "ws_t3bootstrap"
+		}
+	}
+}

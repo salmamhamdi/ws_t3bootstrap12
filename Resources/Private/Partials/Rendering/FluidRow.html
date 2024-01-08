@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Content"/>
+
+<f:section name="Main">
+    <ws:variable.register.set name="containerless" value="false">
+        <v:tag name="{f:if(condition:settings.rowTag,then:settings.rowTag,else:'div')}" class="row {alignment} {adjustment}">
+            <f:if condition="{settings.rowTag} == 'table'">
+                <tr>
+            </f:if>
+
+            <v:condition.type.isArray value="{record.processedColumns}">
+                <f:for each="{record.processedColumns}" as="column" iteration="iteration">
+                    <ws:column
+                        display="{f:if(condition: '{display}',then:display,else:'block')}"
+                        xs="{column.xs}"
+                        sm="{column.sm}"
+                        md="{column.md}"
+                        lg="{column.lg}"
+                        xl="{column.xl}"
+                        xxl="{column.xxl}"
+                        class="{column.alignment} {column.additionalClass} colindex-{iteration.index}"
+                        tag="{f:if(condition:settings.colTag,then:settings.colTag,else:'div')}">
+
+                        <flux:content.render area="column{iteration.cycle}"/>
+
+                    </ws:column>
+
+                </f:for>
+            </v:condition.type.isArray>
+            <f:if condition="{settings.rowTag} == 'table'"></tr></f:if>
+        </v:tag>
+    </ws:variable.register.set>
+</f:section>
+
+</html>

@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+
+    <div id="c{data.uid}" class="frame{f:if(condition:effects.flip,else:' card')} {frame_classes} frame-type-{data.CType} frame-layout-{data.layout}">
+
+        <f:if condition="{data._LOCALIZED_UID}">
+            <a id="c{data._LOCALIZED_UID}"></a>
+        </f:if>
+
+        <f:render section="Main" optional="true"/>
+
+    </div>
+
+
+</f:spaceless>
+</html>

@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:section name="Main">
+
+    <v:variable.set name="falImages" value="{v:content.resources.fal(field: 'image')}"/>
+
+    <div class="thumbnail">
+        <f:alias map="{falImage: falImages.0}">
+            <f:if condition="{falImage}">
+                <f:link.typolink parameter="{falImage.link}">
+
+                    <figure class="image">
+                        <f:render partial="Image" section="Image" arguments="{src:falImage.uid, treatIdAsReference:1, class:'img-fluid'}"/>
+                        <f:if condition="{falImage.copyright}">
+                            <figcaption class="image-caption">
+                                <span class="copyright">&copy; {falImage.copyright}</span>
+                            </figcaption>
+                        </f:if>
+                    </figure>
+
+                </f:link.typolink>
+            </f:if>
+            <div class="caption">
+                <flux:content.render area="content"/>
+            </div>
+        </f:alias>
+    </div>
+
+</f:section>
+
+</html>

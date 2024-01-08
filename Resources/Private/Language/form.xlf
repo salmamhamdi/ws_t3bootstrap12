@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+	<file t3:id="1593906518" source-language="en" datatype="plaintext" original="messages" date="2016-08-21T20:15:32Z"
+		  product-name="ws_t3bootstrap">
+		<header/>
+		<body>
+
+			<trans-unit id="formEditor.elements.DSGVOCheckbox.label" resname="formEditor.elements.DSGVOCheckbox.label">
+				<source>DSGVO Checkbox</source>
+			</trans-unit>
+
+			<trans-unit id="element.DSGVOCheckbox.properties.infotext">
+				<source><![CDATA[By ticking the box, you agree that the data provided by you will be collected and stored electronically to answer your request. You can revoke this consent at any time by sending a message to us. In this case your data will be deleted immediately. For further information, please refer to our <a href="%s">privacy policy</a>.]]></source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+
+<f:section name="Main">
+
+    <f:render partial="Assets" section="Card" optional="true"/>
+
+    <v:variable.set name="falImage" value="{v:content.resources.fal(field: 'image') -> v:iterator.first()}"/>
+
+    <div class="card {additionalClass}">
+
+        <f:if condition="{record.header}">
+            <div class="card-header">{record.header}</div>
+        </f:if>
+
+        <f:if condition="{falImage}">
+            <figure class="mb-0">
+
+                <f:link.typolink parameter="{falImage.link}">
+                    <f:render partial="Image" section="Image" arguments="{src:falImage.uid, treatIdAsReference:1, class: 'card-img-top img-fluid'}"/>
+                </f:link.typolink>
+
+                <f:if condition="{ws:media.image.meta(src:falImage.uid,treatIdAsReference:1,field:'copyright')}">
+                    <figcaption class="image-caption">
+                        <span class="copyright">&copy; {ws:media.image.meta(src:falImage.uid,treatIdAsReference:1,field:'copyright')}</span>
+                    </figcaption>
+                </f:if>
+            </figure>
+
+        </f:if>
+        <f:if condition="{iconClass}">
+            <i class="fa fa-{iconClass}"></i>
+        </f:if>
+        <div class="card-body">
+            <flux:content.render area="content"/>
+        </div>
+
+    </div>
+</f:section>
+</html>

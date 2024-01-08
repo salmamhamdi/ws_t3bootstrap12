@@ -1,0 +1,22 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ws_t3bootstrap/Configuration/TypoScript/ContentElement/Element/" extensions="typoscript">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ws_t3bootstrap/Configuration/TypoScript/ContentElement/TextMedia/" extensions="typoscript">
+
+lib.contentElement {
+
+  settings.wst3bootstrap < plugin.tx_wst3bootstrap.settings
+
+  dataProcessing {
+
+    703 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+    703 {
+      references.fieldName = background_media
+      as = backgroundMedia
+    }
+
+    706 = WapplerSystems\WsT3bootstrap\Frontend\DataProcessing\IconProcessor
+    706.withAppearance = 1
+    707 = WapplerSystems\WsT3bootstrap\Frontend\DataProcessing\FrameClassesProcessor
+    708 = WapplerSystems\WsT3bootstrap\Frontend\DataProcessing\AosDataAttributeProcessor
+
+  }
+}

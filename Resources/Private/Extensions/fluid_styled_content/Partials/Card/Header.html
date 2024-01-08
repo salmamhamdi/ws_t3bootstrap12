@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:section name="Main">
+
+    <f:if condition="{data.header_layout} != 100">
+        <f:if condition="{data.header}">
+            <f:if condition="{data.header_layout} > 0">
+                <f:then>
+                    <v:tag name="h{data.header_layout}" class="card-header text-{f:if(condition:data.header_position,then:data.header_position,else:'left')}">
+                        <f:link.typolink parameter="{data.header_link}">{data.header}</f:link.typolink>
+                    </v:tag>
+                </f:then>
+                <f:else>
+                    <div class="card-header text-{f:if(condition:data.header_position,then:data.header_position,else:'left')}">
+                        <f:link.typolink parameter="{data.header_link}">{data.header}</f:link.typolink>
+                    </div>
+                </f:else>
+            </f:if>
+
+        </f:if>
+    </f:if>
+
+</f:section>
+</html>

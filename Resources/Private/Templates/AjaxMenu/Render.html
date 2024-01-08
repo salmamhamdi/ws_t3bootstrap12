@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:spaceless>
+    <f:if condition="{pageIds}">
+        <f:for each="{pageIds}" as="pageId">
+            <v:menu pageUid="{pageId}" includeSpacers="false" classHasSubpages="sub" expandAll="false">
+                <f:if condition="{menu}">
+                    <ul data-id="{pageId}">
+                        <f:for each="{menu}"  as="menuPage">
+                            <li class="{menuPage.class}" data-id="{menuPage.uid}">
+                                <a href="{f:if(condition: '!{menuPage.prevent_link}', then:menuPage.link, else: '#prevent-link')}" class="{menuPage.class}" {f:if(condition:menuPage.target,then:'target="{menuPage.target}"')}>
+                                {f:if(condition: menuPage.nav_title, then: menuPage.nav_title, else: menuPage.title)}</a>
+
+                                <v:menu pageUid="{menuPage.uid}" includeSpacers="false" expandAll="false" classHasSubpages="sub" as="submenu">
+                                    <f:if condition="{submenu}">
+                                        <ul data-id="{menuPage.uid}">
+                                            <f:for each="{submenu}"  as="submenuPage">
+                                                <li class="{submenuPage.class}" data-id="{submenuPage.uid}">
+                                                    <a href="{f:if(condition: '!{submenuPage.prevent_link}', then:submenuPage.link, else: '#prevent-link')}" class="{submenuPage.class}" {f:if(condition:submenuPage.target,then:'target="{submenuPage.target}"')}>
+                                                    {f:if(condition: submenuPage.nav_title, then: submenuPage.nav_title, else: submenuPage.title)}</a>
+
+                                                </li>
+                                            </f:for>
+                                        </ul>
+                                    </f:if>
+                                </v:menu>
+
+                            </li>
+                        </f:for>
+                    </ul>
+                </f:if>
+            </v:menu>
+        </f:for>
+    </f:if>
+</f:spaceless>
+</html>

@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+      xmlns:ws="http://typo3.org/ns/WapplerSystems/WsT3bootstrap/ViewHelpers"
+      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:section name="Main">
+    <div class="panel panel-{class}">
+        <f:if condition="{header}">
+            <div class="panel-heading high-ct-inverted"><h3 class="panel-title">{header}</h3></div>
+        </f:if>
+        <div class="panel-body">
+            <flux:content.render area="content"/>
+        </div>
+    </div>
+</f:section>
+
+</html>
